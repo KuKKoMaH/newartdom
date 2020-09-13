@@ -1,0 +1,191 @@
+.courses
+  &__title
+    position: relative;
+    font-size: 60px
+    line-height: 75px
+    font-weight: bold;
+    color: #ffffff
+    margin-bottom: 121px;
+    +media('md')
+      margin-left: 0
+      font-size: 30px
+      line-height: 44px
+      margin-bottom: 31px
+
+    &:before, &:after
+      content: ''
+      position: absolute;
+
+    &:before
+      top: -5px;
+      left: -28px;
+      width: 747px;
+      height: 47px;
+      background: #ec3434
+      +media('md')
+        bottom: -6px;
+        right: -23px;
+        width: 560px;
+        height: 20px;
+
+    &:after
+      left: -15px;
+      top: 2px;
+      width: 2000px;
+      height: 75px;
+      background: #1a1616
+      +media('md')
+        right: -5px;
+        height: 40px;
+
+    span
+      position: relative;
+      z-index: 1
+      //+media('md')
+      &:nth-child(1)
+        &:before, &:after
+          content: ''
+          position: absolute;
+
+        &:before
+          width: 180px
+          height: 180px
+          background: #ec3434
+          border-radius: 50%
+          top: -53px;
+          left: 75px;
+          z-index: -1
+          +media('md')
+            width: 102px
+            height: 102px
+            top: -12px;
+            left: 27px;
+
+        &:after
+          width: 130px;
+          height: 5px;
+          background: #1a1616;
+          left: 244px;
+          top: 100%;
+          margin-top: 18px;
+          +media('md')
+            margin-left: -16px;
+            margin-top: 8px;
+
+  &__text
+    letter-spacing 0.01em
+
+  &__headers
+    margin: 70px 0
+    display: flex;
+    +media('md')
+      flex-direction column
+      margin: 34px 0 32px
+
+  &__header
+    flex: 1
+    height: 130px
+    padding: 0 15px
+    text-align: center;
+    display: flex;
+    align-items center
+    justify-content center
+    +media('md')
+      height: 70px
+      flex: auto
+
+    &:nth-child(1)
+      background: #f6f6f6
+
+    &:nth-child(2)
+      background: #f2f1f1
+
+    &:nth-child(3)
+      background: #ededed
+
+    span
+      display: block;
+      position: relative;
+      white-space nowrap
+      font-size: 54px
+      line-height: 1
+      color: #ec3434
+      z-index: 1
+      +media('lg')
+        font-size: 40px
+      +media('md')
+        font-size: 26px
+
+      &:before
+        content: ''
+        position: absolute;
+        background: $black
+        left: -10px;
+        right: -11px;
+        height: 8px;
+        bottom: 4px;
+        z-index: -1
+        +media('md')
+          left: -8px;
+          right: -7px;
+          height: 6px;
+          bottom: 0px;
+
+  &__items
+    display: flex;
+    flex-wrap wrap
+    margin: 63px -15px 0 0
+    +media('md')
+      margin: 34px 0 0 0
+
+  &__item
+    width: 20%
+    padding: 0 15px 15px 0
+    @media screen and (max-width: 1550px)
+      width: 25%
+    @media screen and (max-width: 1250px)
+      width: 33.3333%
+    +media('md')
+      width: 100%
+      padding: 0 0 5px
+
+  &__card
+    width: 100%
+    height: 537px
+    background-position: 50% 50%;
+    background-size: cover;
+    display: flex;
+    align-items flex-end
+    padding: 20px
+    color: #ffffff
+    font-size: 42px
+    line-height: 1.1
+    font-weight: bold;
+    +media('md')
+      padding: 16px 19px
+      height: 420px
+      font-size: 28px
+
+  &__more
+    text-align: center;
+    margin: 32px 0
+
+    button
+      position: relative;
+      font-weight: bold;
+
+      &:before
+        content: ''
+        position: absolute;
+        z-index: -1
+        left: -9px;
+        right: -10px;
+        height: 8px;
+        bottom: 6px;
+        background: #ec3434
+        anim()
+
+      &:hover
+        &:before
+          bottom: 0px
+          height: 20px

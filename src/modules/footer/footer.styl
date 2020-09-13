@@ -1,0 +1,203 @@
+.footer
+  background: $black
+  color: $white
+  font-size: 23px
+  +media('md')
+    font-size: 16px
+
+  &__row
+    display: flex;
+    justify-content space-between
+    align-items flex-start
+    max-width 1560px
+    padding: 0px 20px
+    margin: 0 auto
+    +media('md')
+      max-width 320px
+      flex-direction column
+
+    &--top
+      padding-top: 60px
+      padding-bottom: 57px
+      +media('md')
+        padding-top: 31px
+        padding-bottom: 40px
+
+
+    &--bottom
+      padding-top: 29px
+      padding-bottom: 28px
+      border-top: 1px solid #312e2e;
+      font-size: 18px
+      +media('md')
+        font-size: 14px
+        align-items center
+        padding-top: 36px
+        padding-bottom: 38px
+
+        & > *
+          margin-bottom: 12px
+
+          &:last-child
+            margin-bottom: 0
+
+  &__menu
+    margin-top: 3px
+    +media('md')
+      width: 100%
+
+    ul
+      margin: 0
+      padding: 0
+
+    li
+      margin: 0
+      padding: 0
+
+      &:before
+        display: none;
+
+    & > ul
+      display: flex;
+
+      & > li
+        margin-right: 87px
+        +media('md')
+          margin-right: 0
+          width: 50%
+
+        &:last-child
+          margin-right: 0
+
+        & > a
+          display: none;
+
+        & > ul
+          & > li
+            margin-bottom: 22px
+            +media('md')
+              margin-bottom: 16px
+
+            & > a
+              letter-spacing .05em
+              color: #ffffff
+              padding-bottom: 3px
+              border-bottom: 2px solid #ec3434
+              anim()
+              +media('md')
+                padding-bottom: 2px
+
+              &:hover
+                color: #ec3434
+
+  &__address
+    max-width 345px
+    color: #a8a7a7
+    letter-spacing .01em
+    margin-top: 12px
+    +media('md')
+      margin-top: 21px
+
+  &__header
+    position: relative;
+    margin-bottom: 20px
+    color: #ffffff
+    letter-spacing .05em
+    +media('md')
+      margin-bottom: 11px
+
+    &:before
+      content: ''
+      position: absolute;
+      width: 167px
+      height: 2px
+      background: #ec3434
+      top: 100%
+      margin-top: 1px
+      left: 1px
+      +media('md')
+        width: 148px
+
+  &__contacts
+    +media('md')
+      margin-top: 36px
+      width: 100%
+
+  &__cabinet
+    display: flex;
+    align-items center
+    justify-content center
+    background: #262222
+    border-radius: 40px 0 0 0
+    font-size: 15px
+    color: #ffffff
+    height: 80px
+    width: 250px
+    border: 0;
+    anim()
+    +media('md')
+      width: 230px
+      height: 60px
+      font-size: 12px
+      margin: 0 auto
+      border-radius: 30px 0 0 0
+
+    &:hover
+      color: #ec3434
+
+    svg
+      width: 16px
+      height: 24px
+      margin-left: 8px
+      fill #ec3434
+      +media('md')
+        width: 10px
+        height: 15px
+
+  &__socials
+    display: flex;
+    flex-wrap wrap
+    margin-top: 20px
+    +media('md')
+      justify-content center
+      margin-top: 40px
+
+  &__social
+    width: 54px
+    height: 54px
+    line-height: 54px
+    border: 2px solid #262222
+    margin-right: 10px
+    text-align: center;
+    anim()
+    +media('md')
+      margin-right: 5px
+
+    &:last-child
+      margin-right: 0
+
+    svg
+      display: inline-block;
+      width: 20px
+      height: 20px
+      fill: #fff
+      anim()
+
+    &:hover
+      border-color #fff;
+
+      svg
+        fill #ec3434
+
+  &__link
+    color: #ffffff
+    border-bottom: 1px solid #fff
+    letter-spacing .01em
+    anim()
+
+    &:hover
+      color: #ec3434
+      border-color: #ec3434
+
+  &__copyright
+    opacity: .25

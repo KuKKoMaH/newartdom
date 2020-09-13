@@ -1,0 +1,212 @@
+.about
+  position: relative;
+  margin-bottom: 86px
+  overflow: hidden;
+  +media('md')
+    margin-bottom: 67px
+
+  &__title
+    position: absolute;
+    left: 50%
+    margin-left: -555px
+    font-size: 60px
+    line-height: 75px
+    font-weight: bold;
+    color: #ffffff
+    +media('md')
+      left: 19px
+      margin-left: 0
+      font-size: 30px
+      line-height: 40px
+
+    &:before, &:after
+      content: ''
+      position: absolute;
+
+    &:before
+      bottom: -14px;
+      right: -31px;
+      width: 560px
+      height: 40px
+      background: #ec3434
+      +media('md')
+        bottom: -6px;
+        right: -23px;
+        width: 560px;
+        height: 20px;
+
+    &:after
+      right: -7px
+      width: 1000px
+      height: 75px
+      background: #1a1616
+      +media('md')
+        right: -5px;
+        height: 40px;
+
+    span
+      position: relative;
+      z-index: 1
+
+      &:before, &:after
+        content: ''
+        position: absolute;
+
+      &:before
+        width: 195px
+        height: 195px
+        background: #ec3434
+        border-radius: 50%
+        top: -59px;
+        left: -13px;
+        z-index: -1
+        +media('md')
+          width: 76px
+          height: 76px
+          top: -18px;
+          left: -8px;
+
+      &:after
+        width: 100px
+        height: 5px
+        background: #1a1616
+        left: 100%
+        margin-left: -30px;
+        top: 100%;
+        margin-top: 15px;
+        +media('md')
+          margin-left: -16px;
+          margin-top: 8px;
+
+
+  &__content
+    margin: 0 auto
+    max-width 1120px
+    padding-top: 207px
+    +media('md')
+      padding: 98px 20px 0
+
+  &__text
+    font-size: 30px
+    line-height: 1.4
+    +media('md')
+      font-size: 20px
+
+  &__principes
+    position: relative;
+    padding-top: 56px
+    @media screen and (max-width: 1550px)
+      padding-bottom: 80px
+    +media('md')
+      padding-top: 294px
+      padding-bottom: 55px
+
+  &__items
+    position: relative;
+    z-index: 1
+    display: flex;
+    flex-direction column
+    align-items flex-end
+
+  &__decor2
+    position: absolute;
+    left: -43px;
+    top: 27px;
+    z-index: -1
+    +media('md')
+      top: auto;
+      bottom: 100%
+      margin-bottom: -284px
+      left: 50%
+      transform translateX(-50%)
+      height 485px
+      width: auto;
+
+
+  &__itemsHeader
+    font-size: 80px
+    line-height: 75px
+    position: absolute;
+    top: 58px
+    left: 0
+    z-index: 1
+    +media('md')
+      position: static;
+      font-size: 47px
+      line-height: 1
+      margin-bottom: 26px
+
+  &__item
+    position: relative;
+    width: 560px
+    padding-left: 60px
+    font-size: 23px
+    line-height: 33px
+    margin-bottom: 29px
+    +media('md')
+      width: 100%
+      font-size: 16px
+      line-height: 24px
+      padding-left: 48px
+      margin-bottom: 25px
+
+    for index in 1 2 3 4 5 6 7 8 9 10
+      &:nth-child({index})
+        margin-right: (50 * (index - 1)) px;
+        +media('md')
+          margin-right: 0
+
+    &:nth-child(n+5)
+      display: none;
+
+
+    svg
+      position: absolute;
+      width: 41px
+      height: 41px
+      left: 2px;
+      top: 12px;
+      fill #ec3434
+      +media('md')
+        width: 32px
+        height: 32px
+        left: 0px;
+        top: 9px;
+
+  &__more
+    position: absolute;
+    font-size: 30px
+    font-weight: bold;
+    left: 100%
+    bottom: 28px
+    margin-left: 10px
+    @media screen and (max-width: 1550px)
+      left: auto;
+      margin-left: 0
+      right: 20px
+      bottom: 20px
+    +media('md')
+      left: 50%
+      transform translateX(-50%)
+      font-size: 20px
+
+    &:before
+      content: ''
+      position: absolute;
+      left: -8px;
+      right: -7px;
+      top: 28px;
+      height: 8px
+      background: #ec3434
+      anim(.2s)
+      z-index: -1
+      +media('md')
+        top: 16px
+
+    &:hover
+      &:before
+        top: 23px
+        height: 26px
+        +media('md')
+          top: 15px
+

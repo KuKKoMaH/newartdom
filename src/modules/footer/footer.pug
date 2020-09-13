@@ -1,0 +1,35 @@
+footer.footer
+  .footer__row.footer__row--top
+    .footer__menu
+      ul
+        li
+          a(href='#')
+          ul
+            li: a(href='#') Школа
+            li: a(href='#') Менторы
+            li: a(href='#') Курсы
+        li
+          a(href='#')
+          ul
+            li: a(href='#') Модули
+            li: a(href='#') Блог
+            li: a(href='#') Контакты
+
+    .footer__address
+      .footer__header Название города
+      | 285 Charlotte Street, Оттава, провинция Онтарио, K1N 8L5
+
+    .footer__contacts
+      a.footer__cabinet(href='#')
+        | КАБИНЕТ СТУДЕНТА
+        +svg('login')
+      .footer__socials
+        a.footer__social(href='#' target='_blank'): +svg('facebook')
+        a.footer__social(href='#' target='_blank'): +svg('twitter')
+        a.footer__social(href='#' target='_blank'): +svg('instagram')
+        a.footer__social(href='#' target='_blank'): +svg('youtube')
+
+  .footer__row.footer__row--bottom
+    a.footer__link(href="#") Связаться с нами
+    .footer__copyright 2020 © Все права защищены
+    button.footer__link() Политика конфиденциальности

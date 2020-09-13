@@ -1,0 +1,28 @@
+.btn
+  display: inline-flex
+  height: 80px
+  padding: 0 35px
+  align-items center
+  justify-content center
+  position: relative
+  font-weight: bold;
+  background: #ec3434
+  font-size: 24px
+  color: $black
+  text-align: center;
+  border: 0
+  border-radius: 0 0 0 40px;
+  anim()
+  +media('md')
+    height: 60px
+    font-size: 20px
+    border-radius: 0 0 0 30px
+
+  &:focus
+    outline 0
+
+  &:hover
+    color #fff
+
+  &:active
+    color #fff

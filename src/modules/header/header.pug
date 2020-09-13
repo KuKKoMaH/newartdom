@@ -1,0 +1,24 @@
+header.header(style='background-image: url(modules/header/img/header-bg.jpg)')
+  .header__top
+    a.header__logo: img(src='modules/header/img/logo.png')
+
+    .header__menu
+      ul
+        li: a(href='#') ШКОЛА
+        li: a(href='#') МЕНТОРЫ
+        li: a(href='#') КУРСЫ
+        li: a(href='#') МОДУЛИ
+        li: a(href='#') БЛОГ
+        li: a(href='#') КОНТАКТЫ
+
+    a.header__hamburger(href='#'): +svg('menu')
+
+    .header__aside
+      .header__row
+        a.header__cabinet(href='#')
+          | КАБИНЕТ СТУДЕНТА
+          +svg('login')
+        a.header__search(href='#'): +svg('search')
+      .header__row
+        a.header__faq(href='#faq'): +svg('question')
+
