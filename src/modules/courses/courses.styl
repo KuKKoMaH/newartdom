@@ -42,6 +42,7 @@
       position: relative;
       z-index: 1
       //+media('md')
+
       &:nth-child(1)
         &:before, &:after
           content: ''
@@ -132,39 +133,9 @@
           bottom: 0px;
 
   &__items
-    display: flex;
-    flex-wrap wrap
-    margin: 63px -15px 0 0
+    margin-top: 63px
     +media('md')
-      margin: 34px 0 0 0
-
-  &__item
-    width: 20%
-    padding: 0 15px 15px 0
-    @media screen and (max-width: 1550px)
-      width: 25%
-    @media screen and (max-width: 1250px)
-      width: 33.3333%
-    +media('md')
-      width: 100%
-      padding: 0 0 5px
-
-  &__card
-    width: 100%
-    height: 537px
-    background-position: 50% 50%;
-    background-size: cover;
-    display: flex;
-    align-items flex-end
-    padding: 20px
-    color: #ffffff
-    font-size: 42px
-    line-height: 1.1
-    font-weight: bold;
-    +media('md')
-      padding: 16px 19px
-      height: 420px
-      font-size: 28px
+      margin-top: 34px
 
   &__more
     text-align: center;

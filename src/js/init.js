@@ -42,8 +42,8 @@ initSlider('.gallery__slider', ( $wrapper ) => ({
     loadPrevNext: true,
   },
   navigation:    {
-    prevEl: $wrapper.parents('.gallery').find('.navBtn--prev')[0],
-    nextEl: $wrapper.parents('.gallery').find('.navBtn--next')[0],
+    prevEl: $wrapper.parents('.gallery').find('.nav__button--prev')[0],
+    nextEl: $wrapper.parents('.gallery').find('.nav__button--next')[0],
   },
 }), { sm: true, md: true, lg: true });
 
