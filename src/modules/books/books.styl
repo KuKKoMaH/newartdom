@@ -1,0 +1,51 @@
+.books
+  max-width 1560px
+  padding: 0 20px
+  margin: 0 auto 98px
+  +media('md')
+    margin-bottom: 49px
+
+  &__title
+    font-size: 27px
+    line-height: 1.35
+    font-weight: bold;
+    margin-bottom: 31px
+    +media('md')
+      font-size: 20px
+      line-height: 1.4
+      margin-bottom: 14px
+
+  &__items
+    margin: -5px
+    display: flex;
+    flex-wrap wrap
+    +media('md')
+      margin: 0
+
+  &__item
+    width: 50%
+    padding: 5px
+    +media('md')
+      width: 100%
+      padding: 0 0 5px
+
+  &__card
+    border: 2px solid #ec3434
+    padding: 13px 18px 12px
+    height: 100%
+    +media('md')
+      padding: 9px 13px 10px
+
+  &__author
+    font-size: 14px
+    +media('md')
+      font-size: 11px
+      line-height: 1.25
+      margin-bottom: 6px
+
+  &__header
+    font-size: 20px
+    font-weight: bold;
+    +media('md')
+      font-size: 16px
+      line-height: 1.15

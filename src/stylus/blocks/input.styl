@@ -2,28 +2,33 @@
   position: relative;
   display: block;
 
-
   &__input
     position: relative;
     z-index: 1
     display: block
     width: 100%
-    background: #fff
+    background: #f6f6f6
     height: 80px
     font-size: 23px
     font-weight: bold;
-    border: 0 solid #e8e7e7
+    border: 0px solid #f6f6f6
     padding: 0 25px
     anim()
 
     &:hover
       border: 4px solid #e8e7e7
+      padding: 0 21px
 
     &:focus
       border: 4px solid #ec3434
+      padding: 0 21px
 
     &.wpcf7-not-valid
       border-color: #c83b3b
+
+    &--white
+      background: #fff
+      border-color: #fff
 
   &__label
     display: block;
@@ -40,5 +45,9 @@
     min-width 100%
     max-width 100%
     line-height: 1.2
+
+  &--sm
+    ^[0]__label
+      font-size: 18px
 
 

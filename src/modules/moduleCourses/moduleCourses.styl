@@ -1,0 +1,122 @@
+.moduleCourses
+  max-width 1560px
+  padding: 0 20px
+  margin: 0 auto 105px
+  +media('md')
+    margin-bottom: 44px
+
+  &__title
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 40px
+    +media('md')
+      font-size: 30px
+      line-height: 1.15
+      margin-bottom: 24px
+
+  &__cols
+    display: flex;
+    margin: 0 -20px
+    +media('md')
+      margin: 0
+      flex-direction column
+
+  &__col
+    width: 50%
+    padding: 0 20px
+    +media('md')
+      width: 100%
+      padding: 0
+
+  &__item
+    margin-bottom: 14px
+    +media('md')
+      margin-bottom: 5px
+
+    &--active
+      & ^[0]__header
+        &:before
+          height: 0
+
+        span
+          border-color: #ec3434
+
+          &:before, &:after
+            transform translate(50%, -50%) rotate(180deg)
+
+          &:after
+            margin-top: 1px;
+
+
+  &__header
+    position: relative;
+    z-index: 1
+
+    &:before
+      content: ''
+      position: absolute;
+      width: 90px;
+      height: 5px;
+      background: #ec3434;
+      left: -15px;
+      top: 31px;
+      z-index: -1
+      anim()
+      +media('md')
+        width: 58px;
+        left: -6px;
+        top: 26px;
+
+    span
+      position: relative;
+      display: inline-block;
+      font-size: 27px
+      line-height: 1.25
+      font-weight: bold;
+      border: 2px solid #1a1616
+      padding: 5px 46px 8px 12px
+      cursor: pointer;
+      anim()
+      +media('md')
+        font-size: 20px
+        line-height: 1.15
+        padding: 8px 46px 9px 12px
+
+      &:hover
+        &:before
+          border-top-color: #ec3434
+
+      &:before, &:after
+        content ''
+        position: absolute;
+        right: 22px;
+        top: 23px;
+        transform translate(50%, -50%)
+        anim(.2s)
+
+      &:before
+        border-top: 14px solid $black;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+
+      &:after
+        border-top: 8px solid #f6f6f6;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        margin-top: -1px;
+
+  &__body
+    max-height 0
+    overflow: hidden;
+    anim(.3s)
+
+  &__inner
+    font-size: 23px;
+    line-height: 1.45;
+    letter-spacing: .01em;
+    padding: 33px 0 11px 14px;
+    max-width: 780px;
+    +media('md')
+      padding: 24px 0 19px 0
+      font-size: 16px
+      line-height: 1.5

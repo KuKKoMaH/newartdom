@@ -1,28 +1,102 @@
+$search_height = 90px;
+
 .header
-  height: 870px
   position: relative;
   z-index: 2
   overflow: hidden;
-  background-size: cover
-  background-position: 50% 50%
+  height: 870px
   +media('md')
     height: 350px
-  //
-  //&__bg
-  //  position: absolute;
-  //  left: 50%
-  //  top: 50%
-  //  transform translate(-50%, -50%)
-  //  +media('md')
-  //    height: 350px
-  //    width: auto;
+
+
+  &--search
+    & ^[0]__bg
+      filter blur(10px)
+
+      &:after
+        opacity: .75
+
+    & ^[0]__top
+      top: $search_height
+
+    & ^[0]__searchForm
+      top: 0
+
+    & ^[0]__search
+      svg
+        &:nth-child(1)
+          opacity: 0
+
+        &:nth-child(2)
+          opacity: 1
+
+  &__bg
+    position: absolute;
+    background-size: cover
+    background-position: 50% 50%
+    left: -20px
+    top: -20px
+    right: -20px
+    bottom: -20px
+
+    &:after
+      content ''
+      position: absolute;
+      left: 0
+      top: 0
+      right: 0
+      bottom: 0
+      background: $black
+      opacity: 0
+      anim(.25s)
+
+  &__searchForm
+    position: absolute;
+    //height: $search_height
+    top: -($search_height)
+    overflow: hidden;
+    background: #f6f6f6
+    left: 0
+    width: 100%
+    anim(.25s)
+
+    .cWide
+      position: relative;
+
+  &__searchInput
+    display: block;
+    width: 100%
+    height: $search_height
+    font-size: 23px
+
+  &__searchButton
+    position: absolute;
+    right: 20px
+    top: 50%
+    transform translateY(-50%)
+    font-size: 27px
+    line-height: 1
+    font-weight: bold;
+    letter-spacing .025em
+    color: #ec3434
+    padding: 10px 12px 9px 13px
+    border: 2px solid $black
+    anim()
+
+    &:hover
+      border-color: #ec3434
 
   &__top
+    position: absolute;
+    left: 0
+    top: 0
+    width: 100%
     display: flex;
-    position: relative;
+    //position: relative;
     z-index: 1
     align-items center
     justify-content space-between
+    anim(.25s)
     +media('md')
       align-items flex-start
 
@@ -67,6 +141,7 @@
       color: #ffffff
       font-weight: bold;
       border: 0
+      text-decoration: none;
       anim()
 
       &:hover
@@ -87,6 +162,7 @@
     color: #ffffff
     border: 0
     font-size: 18px
+    text-decoration: none;
     anim()
     +media('md')
       width: 200px
@@ -109,9 +185,10 @@
       color: #ec3434
 
   &__search
-    display: flex;
-    align-items center
-    justify-content center
+    display: block;
+    //display: flex;
+    //align-items center
+    //justify-content center
     width: 90px
     height: 90px
     background: #ffffff
@@ -122,12 +199,19 @@
       height: 60px
 
     svg
+      position: absolute;
+      left: 50%
+      top: 50%
+      transform translate(-50%, -50%)
       width: 28px
       height: 28px
       anim()
       +media('md')
         width: 20px
         height: 20px
+
+      &:nth-child(2)
+        opacity: 0
 
     &:hover
       svg

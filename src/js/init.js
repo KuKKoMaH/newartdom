@@ -2,7 +2,7 @@ import Breakpoints  from 'breakpoints-js';
 import SmoothScroll from 'smooth-scroll';
 // import baron        from 'baron';
 // import noUiSlider   from 'nouislider';
-// import 'selectize';
+import 'selectize';
 import initSlider   from './initSlider';
 import scriptLoader from './scriptLoader';
 
@@ -28,6 +28,7 @@ $('.select').each(( i, el ) => {
   let inited = false;
   $select.selectize({
     maxItems:       1,
+    dropdownParent: 'body',
   });
 });
 
@@ -35,7 +36,7 @@ initSlider('.gallery__slider', ( $wrapper ) => ({
   slidesPerView: 1,
   spaceBetween:  0,
   loop:          true,
-  autoHeight:    true,
+  // autoHeight:    true,
   wrapperClass:  'gallery__items',
   slideClass:    'gallery__item',
   lazy:          {

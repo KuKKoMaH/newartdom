@@ -12,6 +12,9 @@ import './js/saveUTM';
 
 import './modules/header/header';
 import './modules/faq/faq';
+import './modules/moduleCourses/moduleCourses';
+import './modules/modulesList/modulesList';
+import './modules/form/form';
 
 
 

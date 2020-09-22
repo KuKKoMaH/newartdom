@@ -1,0 +1,221 @@
+.module
+  padding-bottom: 30px
+  +media('md')
+    padding-bottom: 51px
+
+  &__container
+    max-width 1560px
+    padding: 0 20px
+    margin: 0 auto
+    +media('md')
+      padding: 0 15px
+
+  &__title
+    position: relative;
+    font-size: 60px
+    line-height: 80px
+    font-weight: bold;
+    color: #ffffff
+    margin-bottom: 115px;
+    margin-top: -5px
+    +media('md')
+      margin-top: -3px
+      margin-left: 0
+      font-size: 30px
+      line-height: 44px
+      margin-bottom: 50px
+
+    &:before, &:after
+      content: ''
+      position: absolute;
+
+    &:after
+      right: 100%
+      top: 3px
+      height: 100%
+      width: 1000px
+      background: repeating-linear-gradient(#1a1616 0px, #1a1616 73px, transparent 73px, transparent 80px)
+      z-index: -1
+      +media('md')
+        background: repeating-linear-gradient(#1a1616 0px, #1a1616 37px, transparent 37px, transparent 44px)
+
+    &:before
+      background: #ec3434
+      width: 561px;
+      height: 40px;
+      left: 345px;
+      top: 54px;
+      +media('md')
+        left: 87px;
+        top: 28px;
+        width: 300px;
+        height: 20px;
+
+    & > span
+      background: $black
+      position: relative;
+      box-shadow (-18px 0 0 0 $black) , 18px 0 0 0 $black;
+
+      & > span
+        position: relative;
+        z-index: 1;
+
+      &:before, &:after
+        content: ''
+        position: absolute;
+
+      &:after
+        width: 195px
+        height: 195px
+        background: #ec3434
+        border-radius: 50%
+        top: -56px;
+        left: -102px;
+        +media('md')
+          width: 76px
+          height: 76px
+          top: -18px;
+          left: -47px;
+
+      &:before
+        width: 130px;
+        height: 5px;
+        background: #1a1616;
+        left: -16px;
+        top: 100%;
+        margin-top: 18px;
+        +media('md')
+          margin-left: -306px;
+          margin-top: 8px;
+
+  &__row
+    position: relative;
+    +media('md')
+      margin-bottom: 63px
+      &:last-child
+        margin-bottom: 0
+
+    &--reverse
+      & ^[0]__info
+        margin-left: 50%
+        padding: 5% 0% 5% 6.5%;
+        +media('md')
+          margin-left: 0
+          padding: 0 5px 33px
+
+      & ^[0]__aside
+        left: 0
+
+      & ^[0]__nav
+        right: auto;
+        left: 200px
+
+  //display: flex;
+
+  &__info
+    max-width 50%
+    width: 100%
+    font-size: 23px;
+    line-height: 1.45;
+    padding: 5% 6.5% 5% 0;
+    +media('md')
+      max-width none
+      padding: 0 5px 33px
+      font-size: 16px
+
+    p
+      margin-bottom: 2.7em
+
+    *:last-child
+      margin-bottom: 0
+
+  &__header
+    font-size: 80px
+    line-height: 85px
+    margin: -90px 0 60px -6px
+    hyphens: auto;
+    +media('md')
+      font-size: 47px
+      line-height: 47px
+      margin: 0 0 30px
+
+  &__aside
+    position: absolute;
+    height: 100%
+    top: 0
+    left: 50%
+    width: 50%
+    +media('md')
+      position: static;
+      left: 0
+      width: 100%
+      &.gallery
+        height: 200px
+
+  &__image
+    height: 100%
+    background-size: cover
+    background-position: 50% 50%
+
+  &__nav
+    position: absolute;
+    right: 200px
+    bottom: -40px
+
+  &__blockquote
+    position: relative;
+    background: $black;
+    color: #ffffff
+    font-size: 23px
+    line-height: 1.45
+    font-weight: bold;
+    +media('md')
+      font-size: 16px
+      line-height: 1.5
+
+    //height: 100%
+
+    > div
+      padding: 7% 0 3% 10.5%
+      position: relative;
+      z-index: 1
+      max-width (1560 / 2) px
+      overflow: hidden;
+      +media('md')
+        padding: 34px 20px 21px
+
+      &:before, &:after
+        content: ''
+        position: absolute;
+
+      &:after
+        background: #ec3434
+        width: 260px
+        height: 260px
+        border-radius: 50%
+        left: 194px;
+        top: 153px;
+        z-index: -1
+        +media('md')
+          width: 270px
+          height: 270px
+          left: -77px;
+          top: 129px;
+
+    &:before, &:after
+      content: ''
+      position: absolute;
+
+    &:before
+      top: -39px;
+      bottom: -40px;
+      right: 208px;
+      width: 31px
+      background: #ec3434
+      z-index: -1
+      +media('md')
+        top: -16px;
+        bottom: -16px;
+        right: 75px;
+        width: 35px;
+

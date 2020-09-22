@@ -26,3 +26,17 @@
 
   &:active
     color #fff
+
+  &--topRight
+    border-radius: 0 40px 0 0;
+    +media('md')
+      border-radius: 0 30px 0 0;
+
+  &--bottomRight
+    border-radius: 0 0 40px 0;
+    +media('md')
+      border-radius: 0 0 30px 0;
+
+  &--black
+    color: #ec3434
+    background: $black;

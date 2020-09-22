@@ -1,4 +1,13 @@
-header.header(style='background-image: url(modules/header/img/header-bg.jpg)')
+header.header
+  .header__bg(style='background-image: url(modules/header/img/header-bg.jpg)')
+
+  .header__searchForm
+    .cWide
+      form
+        input.header__searchInput(placeholder='Введите ключевые слова для поиска')
+        button.header__searchButton ПОИСК
+
+
   .header__top
     a.header__logo: img(src='modules/header/img/logo.png')
 
@@ -18,7 +27,9 @@ header.header(style='background-image: url(modules/header/img/header-bg.jpg)')
         a.header__cabinet(href='#')
           | КАБИНЕТ СТУДЕНТА
           +svg('login')
-        a.header__search(href='#'): +svg('search')
+        a.header__search(href='#')
+          +svg('search')
+          +svg('close')
       .header__row
         a.header__faq(href='#faq'): +svg('question')
 

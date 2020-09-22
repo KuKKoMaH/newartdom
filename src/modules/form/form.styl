@@ -1,53 +1,190 @@
 .form
-  width: 100%
-  max-width 570px
-  margin: 0 auto
-  +media('md')
-    padding: 0 20px
+  padding-bottom: 120px
 
-  h2
-    text-align: center;
-    font-size: 36px
-    margin-bottom: 16px
+  &__title
+    position: relative;
+    margin-bottom: 112px
+    font-size: 60px
+    line-height: 75px
+    font-weight: bold;
+    color: #ffffff
     +media('md')
-      font-size: 22px
+      left: 19px
+      margin-left: 0
+      font-size: 30px
+      line-height: 40px
+      margin-bottom: 60px
+
+    &:before, &:after, span:before, span:after
+      content: ''
+      position: absolute;
+
+    &:before
+      width: 235px;
+      height: 40px;
+      background: #ec3434
 
     &:after
-      content: ''
-      display: block;
-      width: 100px
-      height: 2px
-      background: #e33535
-      margin: 11px auto 0
-      +media('md')
-        width: 60px
-        height: 1px
+      width: 100px;
+      height: 5px;
+      background: #1a1616;
 
-  &__text
-    text-align: center;
+    span
+      position: relative;
+      z-index: 1
 
-  &__inputs
-    margin-top: 62px
+      &:before
+        right: -20px
+        width: 1000px
+        height: 75px
+        background: #1a1616
+        z-index: -1
+        +media('md')
+          right: -5px;
+          height: 40px;
 
-  &__input
-    margin-bottom: 35px
-    +media('md')
-      margin-bottom: 30px
+      &:after
+        width: 195px
+        height: 195px
+        background: #ec3434
+        border-radius: 50%
+        z-index: -1
+        +media('md')
+          width: 76px
+          height: 76px
+          top: -18px;
+          left: -8px;
 
-  &__footer
-    display: flex;
-    align-items center
-    +media('md')
-      flex-direction column-reverse
+    &--01
+      &:before
+        top: 15px;
+        left: 433px;
+        +media('md')
+          top: 33px;
+          left: -470px;
+
+      &:after
+        left: 253px;
+        top: 94px;
+        +media('md')
+          top: 47px
+
+      span
+        &:after
+          top: -59px;
+          left: 107px;
+        +media('md')
+          top: -18px;
+          left: -8px;
+
+    &--02
+      &:before
+        top: 40px;
+        left: 248px;
+        +media('md')
+          top: 33px;
+          left: -470px;
+
+      &:after
+        left: -152px
+        top: 94px;
+        +media('md')
+          top: 47px
+
+      span
+        &:after
+          top: -59px;
+          left: -112px
+        +media('md')
+          top: -18px;
+          left: -8px;
 
   &__info
-    font-size: 11px
-    +media('md')
-      margin-top: 25px
-      font-size: 10px;
-      text-align: center;
+    max-width 720px
+    margin: 0 auto 118px
+
+  &__row
+    margin-bottom: 32px
+    display: flex;
+
+    .input
+      width: 100%
+
+  &__age
+    max-width 160px
+    margin-right: 40px
+    flex-shrink 0
+
+  &__items
+    display: flex;
+    align-items flex-start
+    flex-wrap wrap
+    margin: 0 -20px
+
+  &__item
+    width: 33.333%
+    padding: 0 20px 60px
+
+  &__options
+    max-height 0
+    overflow: hidden;
+    anim(.25s)
+
+  &__inner
+    padding-top: 24px
+
+    .input
+      margin-bottom: 20px
+
+  &__note
+    font-size: 18px
+
+  &__buttons
+    display: flex;
+    margin: 50px 0 104px
 
   &__button
+    flex: 1
+    cursor: pointer;
+
+    input
+      display: none;
+
+    span
+      display: flex;
+      align-items center
+      justify-content center
+      height: 130px
+      font-size: 36px
+      color: #ec3434
+      background: #f2f1f1
+      anim()
+
+    input:checked ~ span
+      background: $black
+
+  &__modules
+    display: flex;
+    flex-wrap wrap
+
+  &__module
+    width: 50%
+    margin-bottom: 55px
+
+  &__footer
+    background: #f6f6f6
+    display: flex;
+    align-items center
+    height: 200px
+    padding: 0 80px 0 72px
+    margin-top: 56px
+
+  &__price
+    font-size: 60px
+
+  &__actions
     margin-left: auto;
-    +media('md')
-      margin-right: auto;
+    display: flex;
+
+    .btn
+      margin-left: 15px

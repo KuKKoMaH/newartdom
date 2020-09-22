@@ -8,49 +8,50 @@
       .selectize-input
         border-color: red
 
+  &:hover
+    .selectize-input
+      border: 4px solid #e8e7e7
+      padding: 0 21px
+
+      &:before
+        right: 20px
+
   .selectize-input
-    border: 2px solid $brown2
-    background: #ffffff
-    padding: 0 40px 0 24px
+    height: 80px
+    font-size: 23px
+    font-weight: bold;
+    border: 0px solid #f6f6f6
+    padding: 0 25px
+    background: #f6f6f6
     position: relative
     white-space: nowrap
     display: flex;
     align-items center
-    font-size: 10px
-    font-weight: 500
-    letter-spacing .3em
-    text-transform: uppercase;
-    height: 80px
     anim()
     +media('md')
       height: 60px
       font-size: 8px
       padding: 0 40px 0 18px
 
-    &:before, &:after
+    &:before
       content: ''
       display: block
       position: absolute
-      right: 18px
+      right: 24px;
+      margin-top: -4px;
       top: 50%
-      margin-top: -3px
-      border-top: 7px solid $white
-      border-left: 6px solid transparent
-      border-right: 6px solid transparent
-
-    //anim()
-
-    &:before
-      margin-top: -2px
-      border-top: 7px solid $brown1
+      border-top: 8px solid $black
+      border-left: 8px solid transparent
+      border-right: 8px solid transparent
+      anim()
 
     &.dropdown-active
-      &:before, &:after
-        transform rotate(180deg)
+      border: 4px solid #ec3434
+      padding: 0 21px
 
       &:before
-        margin-top: -4px
-
+        transform rotate(180deg)
+        right: 20px
 
     &.disabled
       background-color: #dfdfdf
@@ -62,7 +63,6 @@
       white-space: nowrap
       text-overflow: ellipsis
       max-width: 100%
-      letter-spacing .3em
 
     input
       font-size: 1em
@@ -80,62 +80,64 @@
       -webkit-user-select: auto
       -webkit-box-shadow: none
       box-shadow: none
-      letter-spacing .3em
-      text-transform: uppercase;
 
-  .selectize-dropdown
+  &.selectize-dropdown, & .selectize-dropdown
     position: absolute
+    overflow: auto;
+    margin-top: -4px
     z-index: 10
-    background: #fff
-    min-width: 100%;
+    background: #f6f6f6
+    //min-width: 100%;
+    border: 4px solid #ec3434
     border-top: 0
     box-shadow 0 9px 24px rgba($black, .15)
 
-  .selectize-dropdown-content
+  & .selectize-dropdown-content, &.selectize-dropdown-content
     max-height 220px
-    padding: 20px 0
+    //padding: 20px 0
     height: 100%
     width: 100%
 
-    .option
-      margin-right: 31px
-      margin-bottom: 10px
-      padding: 6px 24px 5px
-      white-space: nowrap
-      overflow: hidden
-      text-overflow: ellipsis
-      cursor: pointer
-      letter-spacing .3em
-      font-size: 10px
-      font-weight: 500
-      text-transform: uppercase;
-      //border-bottom: 1px solid #d5d5d8
-      anim()
+  & .option, &.option
+    margin-right: 31px
+    margin-bottom: 10px
+    padding: 6px 24px 5px
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+    cursor: pointer
+    font-size: 23px
+    font-weight: bold;
 
-      &:last-child
-        margin-bottom: 0
+    //border-bottom: 1px solid #d5d5d8
+    anim()
 
-      &.active
-        //background-color: #dfb47a
-        background: $brown2
-        color: $white
+    &:last-child
+      margin-bottom: 0
 
+    &.active
+      //background-color: #dfb47a
+      color: #ec3434
 
-  &--sm
+  &--green
     & .selectize-input
-      height: 58px
+      border: 2px solid #70cb4c;
+      padding: 0 23px
+      height: 60px
+      font-size: 18px
 
-  &__track
-    position: absolute;
-    right: 15px
-    top: 30px
-    bottom: 30px
-    width: 1px
-    background: #e8e7e6
+      &.dropdown-active
+        border-color #70cb4c;
 
-  &__bar
-    position: absolute;
-    width: 1px
-    background: $brown1
-    z-index: 1
+      &:before
+        right: 22px
 
+    &:hover
+      .selectize-input
+        border-color #70cb4c;
+
+    & .selectize-dropdown, &.selectize-dropdown
+      border-color #70cb4c;
+
+    &.option, & .option
+      font-size: 18px
