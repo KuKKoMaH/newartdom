@@ -8,7 +8,48 @@
     <link rel="stylesheet" media="all" href="style.css">
   </head>
   <body onunload="">
-    <!--include ../modules/header/header-->
+    <header class="header">
+      <div class="header__bg" style="background-image: url(img/modules-header-img-header-bg.jpg)"></div>
+      <div class="header__searchForm">
+        <div class="cWide">
+          <form>
+            <input class="header__searchInput" placeholder="Введите ключевые слова для поиска">
+            <button class="header__searchButton">ПОИСК</button>
+          </form>
+        </div>
+      </div>
+      <div class="header__top"><a class="header__logo"><img src="img/modules-header-img-logo.png"></a>
+        <div class="header__menu">
+          <ul>
+            <li><a href="#">ШКОЛА</a></li>
+            <li><a href="#">МЕНТОРЫ</a></li>
+            <li><a href="#">КУРСЫ</a></li>
+            <li><a href="#">МОДУЛИ</a></li>
+            <li><a href="#">БЛОГ</a></li>
+            <li><a href="#">КОНТАКТЫ</a></li>
+          </ul>
+        </div><a class="header__hamburger" href="#">
+          <svg>
+            <use xlink:href="icons/icons.svg#icon-menu"></use>
+          </svg></a>
+        <div class="header__aside">
+          <div class="header__row"><a class="header__cabinet" href="#">КАБИНЕТ СТУДЕНТА
+              <svg>
+                <use xlink:href="icons/icons.svg#icon-login"></use>
+              </svg></a><a class="header__search" href="#">
+              <svg>
+                <use xlink:href="icons/icons.svg#icon-search"></use>
+              </svg>
+              <svg>
+                <use xlink:href="icons/icons.svg#icon-close"></use>
+              </svg></a></div>
+          <div class="header__row"><a class="header__faq" href="#faq">
+              <svg>
+                <use xlink:href="icons/icons.svg#icon-question"></use>
+              </svg></a></div>
+        </div>
+      </div>
+    </header>
     <div class="about">
       <h2 class="about__title"><span>О ШКОЛЕ</span></h2>
       <div class="about__content">
@@ -218,7 +259,53 @@
         </div>
       </div>
     </div>
-    <!--include ../modules/footer/footer-->
+    <footer class="footer">
+      <div class="footer__row footer__row--top">
+        <div class="footer__menu">
+          <ul>
+            <li><a href="#"></a>
+              <ul>
+                <li><a href="#">Школа</a></li>
+                <li><a href="#">Менторы</a></li>
+                <li><a href="#">Курсы</a></li>
+              </ul>
+            </li>
+            <li><a href="#"></a>
+              <ul>
+                <li><a href="#">Модули</a></li>
+                <li><a href="#">Блог</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__address">
+          <div class="footer__header">Название города</div>285 Charlotte Street, Оттава, провинция Онтарио, K1N 8L5
+        </div>
+        <div class="footer__contacts"><a class="footer__cabinet" href="#">КАБИНЕТ СТУДЕНТА
+            <svg>
+              <use xlink:href="icons/icons.svg#icon-login"></use>
+            </svg></a>
+          <div class="footer__socials"><a class="footer__social" href="#" target="_blank">
+              <svg>
+                <use xlink:href="icons/icons.svg#icon-facebook"></use>
+              </svg></a><a class="footer__social" href="#" target="_blank">
+              <svg>
+                <use xlink:href="icons/icons.svg#icon-twitter"></use>
+              </svg></a><a class="footer__social" href="#" target="_blank">
+              <svg>
+                <use xlink:href="icons/icons.svg#icon-instagram"></use>
+              </svg></a><a class="footer__social" href="#" target="_blank">
+              <svg>
+                <use xlink:href="icons/icons.svg#icon-youtube"></use>
+              </svg></a></div>
+        </div>
+      </div>
+      <div class="footer__row footer__row--bottom"><a class="footer__link" href="#">Связаться с нами</a>
+        <div class="footer__copyright">2020 © Все права защищены</div>
+        <button class="footer__link">Политика конфиденциальности</button>
+      </div>
+    </footer>
     <!--.hidden-->
     <!--include ../modules/photoswipe/photoswipe-->
     <!--include ../modules/popup/popup-callback-->
