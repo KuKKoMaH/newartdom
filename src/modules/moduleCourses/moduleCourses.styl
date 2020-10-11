@@ -120,3 +120,24 @@
       padding: 24px 0 19px 0
       font-size: 16px
       line-height: 1.5
+
+  &__button
+    font-size: 27px;
+    letter-spacing: 0.025em;
+    color: #ec3434;
+    border: 2px solid #1a1616;
+    font-weight: bold;
+    padding: 2px 16px 5px 13px;
+    display: inline-block;
+    text-decoration: none;
+    anim()
+    +media('md')
+      font-size: 20px
+      line-height: 1
+      padding: 5px 9px 5px 8px
+
+    &:hover
+      border: 4px solid #ec3434;
+      padding: 0px 14px 3px 11px;
+      +media('md')
+        padding: 3px 7px 3px 6px

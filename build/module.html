@@ -28,10 +28,17 @@
             <li><a href="#">БЛОГ</a></li>
             <li><a href="#">КОНТАКТЫ</a></li>
           </ul>
-        </div><a class="header__hamburger" href="#">
+          <button class="header__close">
+            <svg>
+              <use xlink:href="icons/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+        <button class="header__hamburger">
           <svg>
             <use xlink:href="icons/icons.svg#icon-menu"></use>
-          </svg></a>
+          </svg>
+        </button>
         <div class="header__aside">
           <div class="header__row"><a class="header__cabinet" href="#">КАБИНЕТ СТУДЕНТА
               <svg>
@@ -54,78 +61,83 @@
       <div class="module__container">
         <h1 class="module__title"><span><span>ВАШИ ЛУЧШИЕ 15</span></span></h1>
       </div>
-      <div class="module__row">
-        <div class="module__container">
-          <div class="module__info">
-            <div class="module__header">Информация<br>о модуле:</div>
-            <p>Портфолио — это совокупность осуществленных работ, а также запланированных и смоделированных проектов, которая является небольшой галереей, персональной выставкой работ художника или дизайнера, только выполненной в виде каталога. По разнообразию и качеству арт-проектов университет или галерея судят о возможностях, теоретических знаниях и практических навыках студента и художника. Оно служит залогом конкурентоспособности и креативности, именно поэтому грамотно оформленное портфолио, вкупе с подробным резюме, увеличивает ваши шансы на трудоустройство или  оступление.</p>
-          </div>
-        </div>
-        <div class="gallery module__aside">
-          <div class="gallery__slider">
-            <div class="gallery__items">
-              <div class="gallery__item module__image" style="background-image: url(img/images-01.jpg)"></div>
-              <div class="gallery__item module__image" style="background-image: url(img/images-02.jpg)"></div>
-              <div class="gallery__item module__image" style="background-image: url(img/images-03.jpg)"></div>
+      <div class="module__rows">
+        <div class="module__row">
+          <div class="module__container">
+            <div class="module__info">
+              <div class="module__header">Информация<br>о модуле:</div>
+              <p>Портфолио — это совокупность осуществленных работ, а также запланированных и смоделированных проектов, которая является небольшой галереей, персональной выставкой работ художника или дизайнера, только выполненной в виде каталога. По разнообразию и качеству арт-проектов университет или галерея судят о возможностях, теоретических знаниях и практических навыках студента и художника. Оно служит залогом конкурентоспособности и креативности, именно поэтому грамотно оформленное портфолио, вкупе с подробным резюме, увеличивает ваши шансы на трудоустройство или  оступление.</p>
             </div>
           </div>
-          <div class="nav module__nav">
-            <button class="nav__button nav__button--prev">
-              <svg>
-                <use xlink:href="icons/icons.svg#icon-arrow"></use>
-              </svg>
-            </button>
-            <button class="nav__button nav__button--next">
-              <svg>
-                <use xlink:href="icons/icons.svg#icon-arrow"></use>
-              </svg>
-            </button>
+          <div class="gallery module__aside">
+            <div class="gallery__slider">
+              <div class="gallery__items">
+                <div class="gallery__item module__image" style="background-image: url(img/images-01.jpg)"></div>
+                <div class="gallery__item module__image" style="background-image: url(img/images-02.jpg)"></div>
+                <div class="gallery__item module__image" style="background-image: url(img/images-03.jpg)"></div>
+              </div>
+            </div>
+            <div class="nav module__nav">
+              <button class="nav__button nav__button--prev">
+                <svg>
+                  <use xlink:href="icons/icons.svg#icon-arrow"></use>
+                </svg>
+              </button>
+              <button class="nav__button nav__button--next">
+                <svg>
+                  <use xlink:href="icons/icons.svg#icon-arrow"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="module__row module__row--reverse">
+          <div class="module__container">
+            <div class="module__info">
+              <p>Благодаря модулю вы подготовите первоклассное портфолио художника и познакомитесь с нюансами и спецификой поступления в российские и зарубежные художественные университеты и школы. В рамках практических курсов вы оздадите как минимум 10 проектов в разных стилях и жанрах современного искусства, что позволит вам в итоге выбрать то направление, что вам особенно нравится или интересно.</p>
+              <p>Курсы «Круиз абитуриента» и «Один не дома» не просто помогут вам выбрать школу вашей мечты в России или за рубежом, но и подготовиться к жизни в стенах университета: мы поговорим об обучении и проживании в другом городе или стране, а также о том, как разнообразить свои студенческие годы и сделать их незабываемыми.</p>
+            </div>
+          </div>
+          <div class="gallery module__aside">
+            <div class="gallery__slider">
+              <div class="gallery__items">
+                <div class="gallery__item module__image" style="background-image: url(img/images-01.jpg)"></div>
+                <div class="gallery__item module__image" style="background-image: url(img/images-02.jpg)"></div>
+                <div class="gallery__item module__image" style="background-image: url(img/images-03.jpg)"></div>
+              </div>
+            </div>
+            <div class="nav module__nav">
+              <button class="nav__button nav__button--prev">
+                <svg>
+                  <use xlink:href="icons/icons.svg#icon-arrow"></use>
+                </svg>
+              </button>
+              <button class="nav__button nav__button--next">
+                <svg>
+                  <use xlink:href="icons/icons.svg#icon-arrow"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="module__row">
+          <div class="module__container">
+            <div class="module__info">
+              <p>Входящий в модуль курс «Лаборатория кураторства» познакомит вас с новейшими практиками презентации художественных проектов и поможет глубже понять свою собственную практику и тенденции в области современной культурной политики и арт-менеджмента.</p>
+              <p>Если для поступления в художественную школу или университет вам требуется выполнить специальные задания, которых нет в нашем списке, то мы в индивидуальном порядке разберем их на соответствующем последнем курсе.</p>
+            </div>
+          </div>
+          <div class="module__aside">
+            <div class="module__blockquote">
+              <div>
+                <p>Мы собрали и структурировали этот модуль таким образом, чтобы студенты, прошедшие его, были полностью готовы к важнейшему шагу в своей жизни — выбору профессии — который будет предопределять всю их дальнейшую жизнь. Найти дело и занятие по душе — залог насыщенной и продуктивной деятельности, которая станет основой успешной карьеры и интересной жизни. В рамках занятий мы создадим общую творческую и интеллектуальную среду, где будем обсуждать проекты, задавать вопросы, получать новый опыт и говорить о современном искусстве.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="module__row module__row--reverse">
-        <div class="module__container">
-          <div class="module__info">
-            <p>Благодаря модулю вы подготовите первоклассное портфолио художника и познакомитесь с нюансами и спецификой поступления в российские и зарубежные художественные университеты и школы. В рамках практических курсов вы оздадите как минимум 10 проектов в разных стилях и жанрах современного искусства, что позволит вам в итоге выбрать то направление, что вам особенно нравится или интересно.</p>
-            <p>Курсы «Круиз абитуриента» и «Один не дома» не просто помогут вам выбрать школу вашей мечты в России или за рубежом, но и подготовиться к жизни в стенах университета: мы поговорим об обучении и проживании в другом городе или стране, а также о том, как разнообразить свои студенческие годы и сделать их незабываемыми.</p>
-          </div>
-        </div>
-        <div class="gallery module__aside">
-          <div class="gallery__slider">
-            <div class="gallery__items">
-              <div class="gallery__item module__image" style="background-image: url(img/images-01.jpg)"></div>
-              <div class="gallery__item module__image" style="background-image: url(img/images-02.jpg)"></div>
-              <div class="gallery__item module__image" style="background-image: url(img/images-03.jpg)"></div>
-            </div>
-          </div>
-          <div class="nav module__nav">
-            <button class="nav__button nav__button--prev">
-              <svg>
-                <use xlink:href="icons/icons.svg#icon-arrow"></use>
-              </svg>
-            </button>
-            <button class="nav__button nav__button--next">
-              <svg>
-                <use xlink:href="icons/icons.svg#icon-arrow"></use>
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="module__row">
-        <div class="module__container">
-          <div class="module__info">
-            <p>Входящий в модуль курс «Лаборатория кураторства» познакомит вас с новейшими практиками презентации художественных проектов и поможет глубже понять свою собственную практику и тенденции в области современной культурной политики и арт-менеджмента.</p>
-            <p>Если для поступления в художественную школу или университет вам требуется выполнить специальные задания, которых нет в нашем списке, то мы в индивидуальном порядке разберем их на соответствующем последнем курсе.</p>
-          </div>
-        </div>
-        <div class="module__aside">
-          <div class="module__blockquote">
-            <div>
-              <p>Мы собрали и структурировали этот модуль таким образом, чтобы студенты, прошедшие его, были полностью готовы к важнейшему шагу в своей жизни — выбору профессии — который будет предопределять всю их дальнейшую жизнь. Найти дело и занятие по душе — залог насыщенной и продуктивной деятельности, которая станет основой успешной карьеры и интересной жизни. В рамках занятий мы создадим общую творческую и интеллектуальную среду, где будем обсуждать проекты, задавать вопросы, получать новый опыт и говорить о современном искусстве.</p>
-            </div>
-          </div>
-        </div>
+      <div class="module__more">
+        <button>ЕЩЕ</button>
       </div>
     </div>
     <div class="books">
@@ -133,26 +145,34 @@
       <div class="books__items">
         <div class="books__item">
           <div class="books__card">
-            <div class="books__author">Франческо Бонами</div>
-            <div class="books__header">Я тоже так могу</div>
+            <div class="books__content">
+              <div class="books__author">Франческо Бонами</div>
+              <div class="books__header">Я тоже так могу</div>
+            </div><a class="books__button" href="#">СКАЧАТЬ</a>
           </div>
         </div>
         <div class="books__item">
           <div class="books__card">
-            <div class="books__author">Хэл Фостер, Розалинда Краусс, Ив-Ален Буа, Бенджамин Бухло, Дэвид Джозелит</div>
-            <div class="books__header">Искусство с 1900 года: модернизм, антимодернизм, постмодернизм</div>
+            <div class="books__content">
+              <div class="books__author">Хэл Фостер, Розалинда Краусс, Ив-Ален Буа, Бенджамин Бухло, Дэвид Джозелит</div>
+              <div class="books__header">Искусство с 1900 года: модернизм, антимодернизм, постмодернизм</div>
+            </div><a class="books__button" href="#">СКАЧАТЬ</a>
           </div>
         </div>
         <div class="books__item">
           <div class="books__card">
-            <div class="books__author">Оссиаaн Уорд</div>
-            <div class="books__header">Искусство смотреть. Как воспринимать современное искусство</div>
+            <div class="books__content">
+              <div class="books__author">Оссиаaн Уорд</div>
+              <div class="books__header">Искусство смотреть. Как воспринимать современное искусство</div>
+            </div>
           </div>
         </div>
         <div class="books__item">
           <div class="books__card">
-            <div class="books__author">Джеймс Элкинс</div>
-            <div class="books__header">Почему нельзя научить искусству</div>
+            <div class="books__content">
+              <div class="books__author">Джеймс Элкинс</div>
+              <div class="books__header">Почему нельзя научить искусству</div>
+            </div>
           </div>
         </div>
       </div>
@@ -164,7 +184,9 @@
           <div class="moduleCourses__item">
             <div class="moduleCourses__header"><span>Круиз абитуриента</span></div>
             <div class="moduleCourses__body">
-              <div class="moduleCourses__inner">На наших курсах мы будем говорить об исторических изменениях, концептуальных предпосылках и социокультурной проблематике современности, которые только и сделали появление сотетрогагу а возможным. Понимая логику функционирования современного искусства, вы с легкостью отличите мощный концептуальный проект от посредственного</div>
+              <div class="moduleCourses__inner">
+                <p>На наших курсах мы будем говорить об исторических изменениях, концептуальных предпосылках и социокультурной проблематике современности, которые только и сделали появление сотетрогагу а возможным. Понимая логику функционирования современного искусства, вы с легкостью отличите мощный концептуальный проект от посредственного</p><a class="moduleCourses__button" href="#">ПОДРОБНЕЕ</a>
+              </div>
             </div>
           </div>
           <div class="moduleCourses__item">

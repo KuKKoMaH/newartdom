@@ -28,10 +28,10 @@
     display: flex;
     align-items center
     anim()
-    +media('md')
-      height: 60px
-      font-size: 8px
-      padding: 0 40px 0 18px
+    //+media('md')
+    //  height: 60px
+    //  font-size: 8px
+    //  padding: 0 40px 0 18px
 
     &:before
       content: ''
@@ -125,12 +125,19 @@
       padding: 0 23px
       height: 60px
       font-size: 18px
+      +media('md')
+        height: 50px
+        padding: 0 18px
 
       &.dropdown-active
         border-color #70cb4c;
 
       &:before
         right: 22px
+
+    & .item
+      +media('md')
+        font-size: 14px
 
     &:hover
       .selectize-input
@@ -141,3 +148,6 @@
 
     &.option, & .option
       font-size: 18px
+      +media('md')
+        font-size: 14px
+        padding-left: 20px

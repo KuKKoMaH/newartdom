@@ -15,6 +15,11 @@ import './modules/faq/faq';
 import './modules/moduleCourses/moduleCourses';
 import './modules/modulesList/modulesList';
 import './modules/form/form';
+import './modules/preloader/preloader';
+import './modules/about/about';
+import './modules/courses/courses';
+import './modules/modules/modules';
+import './modules/module/module';
 
 
 

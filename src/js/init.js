@@ -48,20 +48,6 @@ initSlider('.gallery__slider', ( $wrapper ) => ({
   },
 }), { sm: true, md: true, lg: true });
 
-const formatCurrency = ( value, separator ) => {
-  if (separator === undefined) separator = '\u00A0';
-
-  let rub = ('' + Math.floor(value)).replace(/./g, ( c, i, a ) => {
-    return i > 0 && c !== ',' && (a.length - i) % 3 === 0 ? separator + c : c;
-  }).trim();
-
-  // let cop = value % 100;
-  // if (cop < 10) cop = '0' + cop;
-
-  // const isNegative = value < 0;
-
-  return rub;
-};
 
 const $popupGalleries = $('.popupGallery');
 if ($popupGalleries.length) {

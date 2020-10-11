@@ -137,6 +137,21 @@
     +media('md')
       margin-top: 34px
 
+    .cards__item:nth-child(n+11)
+      visibility: hidden;
+      opacity: 0
+      position: absolute;
+      z-index -1
+      anim()
+
+    &--active
+      .cards__item:nth-child(n+11)
+        visibility: visible;
+        opacity: 1
+        position: static
+        z-index auto
+
+
   &__more
     text-align: center;
     margin: 32px 0

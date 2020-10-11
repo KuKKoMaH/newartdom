@@ -1,0 +1,60 @@
+.history
+  margin-top: 194px
+  margin-bottom: 114px
+  min-height 684px
+  +media('md')
+    margin-top: -17px
+    margin-bottom: 88px
+
+  &__row
+    position: relative;
+
+  &__info
+    max-width 50%
+    padding-right: 50px
+    width: 100%
+    +media('md')
+      max-width none
+      padding-right: 0
+
+  &__header
+    font-size: 80px
+    line-height: 85px
+    margin-bottom: 58px
+    hyphens: auto;
+    +media('md')
+      font-size: 47px
+      line-height: 47px
+      margin-bottom: 27px
+
+  &__text
+    font-size: 23px
+    +media('md')
+      font-size: 16px
+      line-height: 1.5
+
+  &__aside
+    position: absolute;
+    height: 684px
+    top: 13px
+    right: 0
+    width: 50%
+    +media('md')
+      position: static;
+      height: 200px
+      width: 100%
+      margin-top: 33px
+
+  &__image
+    height: 100%
+    background-size: cover
+    background-position: 50% 50%
+
+  &__nav
+    position: absolute;
+    right: 200px
+    bottom: -40px
+    +media('md')
+      right: 50%
+      transform translateX(50%)
+

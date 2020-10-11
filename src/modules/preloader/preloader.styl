@@ -1,0 +1,68 @@
+.preloader
+  position: fixed;
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  background: #ec3434
+  z-index: 100
+  animation: 1s linear 2s 1 normal forwards preloader
+
+  &__container
+    position: absolute;
+    left: 50%
+    top: 50%
+    transform translate(-50%, -50%)
+    width: 60%
+    min-width 300px
+    opacity: 0
+    height: 300px
+    animation: .5s ease-in-out .5s 1 normal forwards preloaderContainer
+
+    svg
+      display: block;
+      width: 100%
+      height: 300px
+      //position: absolute;
+      left: 0
+      top: 0
+      fill transparent
+      stroke: #fff
+      stroke-width .5
+
+  &__overlay
+    height: 0
+    overflow: hidden;
+    animation: 1s ease-in-out .8s 1 normal forwards preloaderOverlay
+
+    svg
+      fill: #fff
+
+@keyframes preloader {
+  from {
+    opacity: 1
+  }
+  to {
+    opacity: 0
+    visibility: hidden;
+  }
+}
+
+
+@keyframes preloaderContainer {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes preloaderOverlay {
+  from {
+    height: 0
+  }
+  to {
+    height: 300px
+  }
+}

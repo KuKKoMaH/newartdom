@@ -108,6 +108,12 @@
     flex-direction column
     align-items flex-end
 
+    &--active
+      & ^[0]__item:nth-child(n+5)
+        opacity: 1
+        position: relative;
+        visibility: visible;
+
   &__decor2
     position: absolute;
     left: -43px;
@@ -121,7 +127,6 @@
       transform translateX(-50%)
       height 485px
       width: auto;
-
 
   &__itemsHeader
     font-size: 80px
@@ -143,6 +148,7 @@
     font-size: 23px
     line-height: 33px
     margin-bottom: 29px
+    anim()
     +media('md')
       width: 100%
       font-size: 16px
@@ -157,8 +163,10 @@
           margin-right: 0
 
     &:nth-child(n+5)
-      display: none;
-
+      visibility: hidden;
+      opacity: 0
+      position: absolute;
+      z-index: -1
 
     svg
       position: absolute;

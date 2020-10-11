@@ -1,4 +1,4 @@
-header.header
+header.header(class=(HEADER_SMALL ? 'header--small' : ''))
   .header__bg(style='background-image: url(modules/header/img/header-bg.jpg)')
 
   .header__searchForm
@@ -19,8 +19,9 @@ header.header
         li: a(href='#') МОДУЛИ
         li: a(href='#') БЛОГ
         li: a(href='#') КОНТАКТЫ
+      button.header__close: +svg('close')
 
-    a.header__hamburger(href='#'): +svg('menu')
+    button.header__hamburger: +svg('menu')
 
     .header__aside
       .header__row

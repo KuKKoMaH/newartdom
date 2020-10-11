@@ -352,7 +352,12 @@ img[data-srcset]
     font-size: 42px
     line-height: 1.1
     font-weight: bold;
+    text-decoration: none;
+    hyphens: auto;
     +media('md')
       padding: 16px 19px
       height: 420px
       font-size: 28px
+
+    &:hover
+      text-decoration: underline;

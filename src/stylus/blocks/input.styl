@@ -24,7 +24,7 @@
       padding: 0 21px
 
     &.wpcf7-not-valid
-      border-color: #c83b3b
+      border: 4px solid #c83b3b
 
     &--white
       background: #fff
@@ -49,5 +49,8 @@
   &--sm
     ^[0]__label
       font-size: 18px
+      +media('md')
+        font-size: 12px
+        margin-bottom: 6px
 
 

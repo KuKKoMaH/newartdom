@@ -1,4 +1,4 @@
-.form
+form.form
   .c
     h2.form__title.form__title--01: span ВАШИ ДАННЫЕ
 
@@ -117,7 +117,7 @@
     .form__items
       .form__item
         label.checkbox
-          input(type='checkbox')
+          input(type='checkbox' name='course' value='1')
           span Скетчинг как коллекционирование опыта
 
         .form__options
@@ -141,7 +141,7 @@
 
       .form__item
         label.checkbox
-          input(type='checkbox')
+          input(type='checkbox' name='course' value='2')
           span Free-run still-life
 
         .form__options
@@ -165,7 +165,7 @@
 
       .form__item
         label.checkbox
-          input(type='checkbox')
+          input(type='checkbox' name='course' value='3')
           span Парафраз в эпоху постмодерна
 
         .form__options
@@ -189,7 +189,7 @@
 
       .form__item
         label.checkbox
-          input(type='checkbox')
+          input(type='checkbox' name='course' value='4')
           span Фотореализм как практика постмодернизма
 
         .form__options
@@ -213,7 +213,7 @@
 
       .form__item
         label.checkbox
-          input(type='checkbox')
+          input(type='checkbox' name='course' value='5')
           span Четыре стены
 
         .form__options
@@ -237,7 +237,7 @@
 
       .form__item
         label.checkbox
-          input(type='checkbox')
+          input(type='checkbox' name='course' value='6')
           span Смыть всё!
 
         .form__options
@@ -270,34 +270,49 @@
     .form__modules
       .form__module
         label.checkbox
-          input(type='radio' name='module')
+          input(type='radio' name='module' value='1')
           span Твои лушчие 15
       .form__module
         label.checkbox
-          input(type='radio' name='module')
+          input(type='radio' name='module' value='2')
           span Художник как теоретик
       .form__module
         label.checkbox
-          input(type='radio' name='module')
+          input(type='radio' name='module' value='3')
           span Искусство в потоке
 
       .form__module
         label.checkbox
-          input(type='radio' name='module')
+          input(type='radio' name='module' value='4')
           span Исекусство в эпоху постмодерна
       .form__module
         label.checkbox
-          input(type='radio' name='module')
+          input(type='radio' name='module' value='5')
           span ART квартал
       .form__module
         label.checkbox
-          input(type='radio' name='module')
+          input(type='radio' name='module' value='6')
           span Дизайн и арт-практика
 
     .form__footer
       .form__price 14 500 ₽
       .form__actions
-        button.btn ОПЛАТИТЬ
+        button.btn.btn--bottomLeft ОПЛАТИТЬ
         button.btn.btn--bottomRight.btn--black ОТПРАВИТЬ ЗАПРОС
 
-
+script.
+  var formConfig = {
+    courses: {
+      1: { price: 100 },
+      2: { price: 200 },
+      3: { price: 300 },
+      4: { price: 400 },
+      5: { price: 500 },
+      6: { price: 600 },
+      7: { price: 700 },
+    },
+    modules: {
+      1: { courses: [2, 3, 4] }
+    }
+  };
+  var totalPrice = 0;

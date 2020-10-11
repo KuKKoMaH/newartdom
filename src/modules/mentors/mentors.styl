@@ -1,0 +1,125 @@
+.mentors
+  &__title
+    margin-bottom: 162px
+    +media('md')
+      margin-bottom: 59px
+    // Красная полоса
+
+    &:before
+      width: 1000px;
+      height: 40px;
+      right: 100%;
+      margin-right: -284px;
+      top: 53px;
+      z-index: -1
+      +media('md')
+        margin-right: -108px;
+        top: 9px;
+
+    & > span
+      // Красный круг
+
+      &:after
+        width: 180px
+        height: 180px
+        top: -52px;
+        left: 319px;
+        +media('md')
+          width: 76px
+          height: 76px
+          top: -17px;
+          left: 134px;
+
+      // Черная полоска
+
+      &:before
+        width: 130px;
+        height: 5px;
+        left: 100%
+        top: 41px;
+        margin-left: -87px;
+        +media('md')
+          top: 17px;
+          margin-left: -107px;
+
+  &__item
+    display: flex;
+    margin-bottom: 87px
+    +media('md')
+      flex-direction column
+      align-items center
+      margin-bottom: 31px
+
+    &:nth-child(2n)
+      flex-direction row-reverse
+      +media('md')
+        flex-direction column
+
+      & ^[0]__content
+        padding-left: 0
+        padding-right: 48px
+        +media('md')
+          padding-right: 0
+
+      & ^[0]__image
+        &:before
+          top: -33px;
+          left: 179px;
+
+        &:after
+          top: -5px;
+          left: 197px;
+
+  &__image
+    padding-top: 10px
+    position: relative;
+
+    &:before, &:after
+      content: ''
+      position: absolute;
+      z-index: -1
+
+    &:before
+      width: 130px
+      height: 130px
+      background: #ec3434
+      border-radius: 50%
+      top: -33px;
+      left: 80px;
+
+    &:after
+      width: 121px
+      height: 5px
+      background: #1a1616;
+      top: 5px;
+      left: 29px;
+
+  &__content
+    padding-left: 48px
+    +media('md')
+      padding-left: 0
+      padding-top: 17px
+
+  &__name
+    font-size: 30px
+    font-weight: bold;
+    +media('md')
+      font-size: 20px
+
+  &__description
+    margin-top: 4px
+    font-size: 18px
+    font-weight: bold;
+    color: #ec3434
+    +media('md')
+      font-size: 12px
+      margin-top: 6px
+
+  &__text
+    margin-top: 36px
+    font-size: 23px
+    line-height: 1.45
+    +media('md')
+      font-size: 16px
+      line-height: 1.5
+      margin-top: 15px

@@ -85,8 +85,19 @@
 
   &__row
     position: relative;
+    min-height 724px
+    +media('md')
+      min-height auto
 
   //display: flex;
+
+  &__placeholder
+    width: 50%
+    float: right;
+    height: 724px
+    margin-left: 50px
+    +media('md')
+      display: none;
 
   &__info
     max-width 50%

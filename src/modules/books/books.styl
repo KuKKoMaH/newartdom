@@ -33,8 +33,14 @@
     border: 2px solid #ec3434
     padding: 13px 18px 12px
     height: 100%
+    display: flex;
+    align-items flex-start
     +media('md')
       padding: 9px 13px 10px
+      flex-direction column
+
+  &__content
+    flex: 1
 
   &__author
     font-size: 14px
@@ -49,3 +55,29 @@
     +media('md')
       font-size: 16px
       line-height: 1.15
+
+  &__button
+    font-size: 18px;
+    margin-left: 18px
+    letter-spacing: 0.025em;
+    color: #ec3434;
+    border: 2px solid #1a1616;
+    font-weight: bold;
+    padding: 2px 13px 2px 13px;
+    display: inline-block;
+    text-decoration: none;
+    anim()
+    +media('md')
+      //font-size: 20px
+      line-height: 1
+      margin-left: 0
+      margin-top: 20px
+      padding: 5px 9px 5px 8px
+
+    &:hover
+      border: 4px solid #ec3434;
+      padding: 0px 11px 0px 11px;
+      +media('md')
+        padding: 3px 7px 3px 6px
+
+

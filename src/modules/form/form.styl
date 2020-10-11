@@ -1,5 +1,8 @@
 .form
   padding-bottom: 120px
+  display: block;
+  +media('md')
+    padding-bottom: 60px
 
   &__title
     position: relative;
@@ -13,7 +16,7 @@
       margin-left: 0
       font-size: 30px
       line-height: 40px
-      margin-bottom: 60px
+      margin-bottom: 53px
 
     &:before, &:after, span:before, span:after
       content: ''
@@ -68,16 +71,20 @@
         top: 94px;
         +media('md')
           top: 47px
+          left: 93px
 
       span
         &:after
           top: -59px;
           left: 107px;
-        +media('md')
-          top: -18px;
-          left: -8px;
+          +media('md')
+            top: -15px;
+            left: 75px;
 
     &--02
+      +media('md')
+        margin-bottom: 23px
+
       &:before
         top: 40px;
         left: 248px;
@@ -102,10 +109,16 @@
   &__info
     max-width 720px
     margin: 0 auto 118px
+    +media('md')
+      padding: 0 20px
+      margin-bottom: 77px
 
   &__row
     margin-bottom: 32px
     display: flex;
+    +media('md')
+      margin-bottom: 22px
+      flex-direction column
 
     .input
       width: 100%
@@ -114,6 +127,9 @@
     max-width 160px
     margin-right: 40px
     flex-shrink 0
+    +media('md')
+      max-width 100%
+      margin: 0 0 22px
 
   &__items
     display: flex;
@@ -124,6 +140,9 @@
   &__item
     width: 33.333%
     padding: 0 20px 60px
+    +media('md')
+      width: 100%
+      padding-bottom: 24px
 
   &__options
     max-height 0
@@ -132,16 +151,26 @@
 
   &__inner
     padding-top: 24px
+    +media('md')
+      padding-top: 20px
+      padding-bottom: 10px
 
     .input
       margin-bottom: 20px
+      +media('md')
+        margin-bottom: 17px
 
   &__note
     font-size: 18px
+    +media('md')
+      font-size: 14px
 
   &__buttons
     display: flex;
     margin: 50px 0 104px
+    +media('md')
+      flex-direction column
+      margin: 92px -20px 60px
 
   &__button
     flex: 1
@@ -159,6 +188,9 @@
       color: #ec3434
       background: #f2f1f1
       anim()
+      +media('md')
+        font-size: 22px
+        height: 70px
 
     input:checked ~ span
       background: $black
@@ -170,6 +202,9 @@
   &__module
     width: 50%
     margin-bottom: 55px
+    +media('md')
+      width: 100%
+      margin-bottom: 23px
 
   &__footer
     background: #f6f6f6
@@ -178,13 +213,30 @@
     height: 200px
     padding: 0 80px 0 72px
     margin-top: 56px
+    +media('md')
+      height: auto;
+      flex-direction column
+      margin-top: 42px
+      padding: 13px 0 20px
 
   &__price
     font-size: 60px
+    +media('md')
+      font-size: 47px
 
   &__actions
     margin-left: auto;
     display: flex;
+    +media('md')
+      flex-direction column
+      margin: 20px 0 0
+      width: 220px
 
     .btn
       margin-left: 15px
+      +media('md')
+        margin: 0 0 10px
+        padding: 0
+        width: 100%
+        &--bottomLeft
+          border-radius: 30px 0 0 0;

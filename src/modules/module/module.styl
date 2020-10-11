@@ -88,8 +88,24 @@
           margin-left: -306px;
           margin-top: 8px;
 
+  &__rows
+    &--active
+      & ^[0]__row:nth-child(n + 3)
+        visibility: visible;
+        opacity: 1
+        position: relative
+        z-index: auto;
+
   &__row
     position: relative;
+
+    &:nth-child(n + 3)
+      visibility: hidden;
+      opacity: 0
+      position: absolute;
+      z-index: -1
+      anim()
+
     +media('md')
       margin-bottom: 63px
       &:last-child
@@ -161,6 +177,7 @@
     position: absolute;
     right: 200px
     bottom: -40px
+    z-index: 1
 
   &__blockquote
     position: relative;
@@ -219,3 +236,27 @@
         right: 75px;
         width: 35px;
 
+
+  &__more
+    text-align: center;
+    margin: 32px 0
+
+    button
+      position: relative;
+      font-weight: bold;
+
+      &:before
+        content: ''
+        position: absolute;
+        z-index: -1
+        left: -9px;
+        right: -10px;
+        height: 8px;
+        bottom: 6px;
+        background: #ec3434
+        anim()
+
+      &:hover
+        &:before
+          bottom: 0px
+          height: 20px

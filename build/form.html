@@ -28,10 +28,17 @@
             <li><a href="#">БЛОГ</a></li>
             <li><a href="#">КОНТАКТЫ</a></li>
           </ul>
-        </div><a class="header__hamburger" href="#">
+          <button class="header__close">
+            <svg>
+              <use xlink:href="icons/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+        <button class="header__hamburger">
           <svg>
             <use xlink:href="icons/icons.svg#icon-menu"></use>
-          </svg></a>
+          </svg>
+        </button>
         <div class="header__aside">
           <div class="header__row"><a class="header__cabinet" href="#">КАБИНЕТ СТУДЕНТА
               <svg>
@@ -50,7 +57,7 @@
         </div>
       </div>
     </header>
-    <div class="form">
+    <form class="form">
       <div class="c">
         <h2 class="form__title form__title--01"><span>ВАШИ ДАННЫЕ</span></h2>
       </div>
@@ -178,7 +185,7 @@
         <div class="form__items">
           <div class="form__item">
             <label class="checkbox">
-              <input type="checkbox"><span>Скетчинг как коллекционирование опыта</span>
+              <input type="checkbox" name="course" value="1"><span>Скетчинг как коллекционирование опыта</span>
             </label>
             <div class="form__options">
               <div class="form__inner">
@@ -207,7 +214,7 @@
           </div>
           <div class="form__item">
             <label class="checkbox">
-              <input type="checkbox"><span>Free-run still-life</span>
+              <input type="checkbox" name="course" value="2"><span>Free-run still-life</span>
             </label>
             <div class="form__options">
               <div class="form__inner">
@@ -236,7 +243,7 @@
           </div>
           <div class="form__item">
             <label class="checkbox">
-              <input type="checkbox"><span>Парафраз в эпоху постмодерна</span>
+              <input type="checkbox" name="course" value="3"><span>Парафраз в эпоху постмодерна</span>
             </label>
             <div class="form__options">
               <div class="form__inner">
@@ -265,7 +272,7 @@
           </div>
           <div class="form__item">
             <label class="checkbox">
-              <input type="checkbox"><span>Фотореализм как практика постмодернизма</span>
+              <input type="checkbox" name="course" value="4"><span>Фотореализм как практика постмодернизма</span>
             </label>
             <div class="form__options">
               <div class="form__inner">
@@ -294,7 +301,7 @@
           </div>
           <div class="form__item">
             <label class="checkbox">
-              <input type="checkbox"><span>Четыре стены</span>
+              <input type="checkbox" name="course" value="5"><span>Четыре стены</span>
             </label>
             <div class="form__options">
               <div class="form__inner">
@@ -323,7 +330,7 @@
           </div>
           <div class="form__item">
             <label class="checkbox">
-              <input type="checkbox"><span>Смыть всё!</span>
+              <input type="checkbox" name="course" value="6"><span>Смыть всё!</span>
             </label>
             <div class="form__options">
               <div class="form__inner">
@@ -362,44 +369,61 @@
         <div class="form__modules">
           <div class="form__module">
             <label class="checkbox">
-              <input type="radio" name="module"><span>Твои лушчие 15</span>
+              <input type="radio" name="module" value="1"><span>Твои лушчие 15</span>
             </label>
           </div>
           <div class="form__module">
             <label class="checkbox">
-              <input type="radio" name="module"><span>Художник как теоретик</span>
+              <input type="radio" name="module" value="2"><span>Художник как теоретик</span>
             </label>
           </div>
           <div class="form__module">
             <label class="checkbox">
-              <input type="radio" name="module"><span>Искусство в потоке</span>
+              <input type="radio" name="module" value="3"><span>Искусство в потоке</span>
             </label>
           </div>
           <div class="form__module">
             <label class="checkbox">
-              <input type="radio" name="module"><span>Исекусство в эпоху постмодерна</span>
+              <input type="radio" name="module" value="4"><span>Исекусство в эпоху постмодерна</span>
             </label>
           </div>
           <div class="form__module">
             <label class="checkbox">
-              <input type="radio" name="module"><span>ART квартал</span>
+              <input type="radio" name="module" value="5"><span>ART квартал</span>
             </label>
           </div>
           <div class="form__module">
             <label class="checkbox">
-              <input type="radio" name="module"><span>Дизайн и арт-практика</span>
+              <input type="radio" name="module" value="6"><span>Дизайн и арт-практика</span>
             </label>
           </div>
         </div>
         <div class="form__footer">
           <div class="form__price">14 500 ₽</div>
           <div class="form__actions">
-            <button class="btn">ОПЛАТИТЬ</button>
+            <button class="btn btn--bottomLeft">ОПЛАТИТЬ</button>
             <button class="btn btn--bottomRight btn--black">ОТПРАВИТЬ ЗАПРОС</button>
           </div>
         </div>
       </div>
-    </div>
+    </form>
+    <script>
+      var formConfig = {
+        courses: {
+          1: { price: 100 },
+          2: { price: 200 },
+          3: { price: 300 },
+          4: { price: 400 },
+          5: { price: 500 },
+          6: { price: 600 },
+          7: { price: 700 },
+        },
+        modules: {
+          1: { courses: [2, 3, 4] }
+        }
+      };
+      var totalPrice = 0;
+    </script>
     <div class="faq" id="faq">
       <div class="faq__container">
         <h2 class="faq__title"><span>FAQ</span></h2>
