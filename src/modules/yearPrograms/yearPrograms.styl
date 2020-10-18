@@ -1,0 +1,138 @@
+.yearPrograms
+  margin-bottom: 47px
+  &__title
+    margin-bottom: 132px
+    +media('md')
+      margin-bottom: 57px
+
+    &:before // Красная полоса
+      width: 561px;
+      height: 40px;
+      left: 279px;
+      top: 52px;
+      z-index: -1
+      +media('md')
+        left: -391px;
+        top: 29px;
+        height: 20px;
+
+    & > span
+      &:after // Красный круг
+        width: 196px;
+        height: 196px;
+        top: -59px;
+        left: 191px;
+        +media('md')
+          width: 76px;
+          height: 76px;
+          top: -17px;
+          left: -9px;
+
+      &:before // Черная полоска
+        width: 100px;
+        height: 5px;
+        left: 774px;
+        top: 89px;
+        +media('md')
+          left: 131px;
+          top: 46px;
+
+  &__items
+    display: flex;
+    align-items flex-start
+    justify-content center
+    flex-wrap wrap
+    margin: 0 -30px
+    +media('md')
+      flex-direction column
+      align-items center
+      margin: 0 -20px
+
+    &--active
+      & ^[0]__item
+        &:nth-child(n + 3)
+          display: block;
+
+  &__item
+    visibility: hidden;
+    width: 100%
+    max-width: 530px
+    margin: 30px
+    +media('md')
+      margin: 0 0 30px
+
+    &:nth-child(n + 3)
+      display: none;
+
+  &__image
+    display: block;
+    position: relative;
+    width: 100%
+    height: 298px
+    background-position: 50% 50%
+    background-size: cover;
+    margin-bottom: 25px
+    +media('md')
+      margin-bottom: 20px
+
+    &:after
+      content: ''
+      position: absolute;
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      background: #000
+      opacity: .6
+      anim()
+
+    &:hover
+      &:after
+        opacity: .3
+
+  &__header
+    font-size: 42px
+    margin-bottom: 19px
+    font-weight: bold;
+    +media('md')
+      font-size: 32px
+      margin-bottom: 15px
+      padding: 0 20px
+
+  &__text
+    font-size: 23px
+    line-height: 1.45
+    +media('md')
+      font-size: 16px
+      padding: 0 20px
+
+  &__btn
+    margin-top: 32px
+    +media('md')
+      margin-top: 20px
+      padding: 0 20px
+
+  &__more
+    text-align: center;
+    margin: 17px 0
+
+    button, a
+      position: relative;
+      font-weight: bold;
+      text-decoration: none;
+
+      &:before
+        content: ''
+        position: absolute;
+        z-index: -1
+        left: -9px;
+        right: -10px;
+        height: 8px;
+        bottom: 6px;
+        background: #ec3434
+        anim()
+
+      &:hover
+        &:before
+          bottom: 0px
+          height: 20px

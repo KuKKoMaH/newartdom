@@ -18,6 +18,7 @@
       padding-right: 0
 
   &__header
+    visibility: hidden;
     font-size: 80px
     line-height: 85px
     margin-bottom: 58px
@@ -29,11 +30,15 @@
 
   &__text
     font-size: 23px
+
+    > *
+      visibility: hidden;
     +media('md')
       font-size: 16px
       line-height: 1.5
 
   &__aside
+    visibility: hidden;
     position: absolute;
     height: 684px
     top: 13px

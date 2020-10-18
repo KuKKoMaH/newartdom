@@ -1,3 +1,5 @@
+import ScrollReveal from "scrollreveal";
+
 const activeClass = 'moduleCourses__item--active';
 $('.moduleCourses__header span').on('click', function ( e ) {
   var $item = $(e.delegateTarget).parent().parent();
@@ -8,4 +10,11 @@ $('.moduleCourses__header span').on('click', function ( e ) {
     $item.find('.moduleCourses__body').css('max-height', $text.outerHeight());
   }
   $item.toggleClass(activeClass);
+});
+
+ScrollReveal().reveal('.moduleCourses__title, .moduleCourses__item', {
+  distance:   '50px',
+  origin:     'bottom',
+  viewFactor: .5,
+  interval:   80,
 });

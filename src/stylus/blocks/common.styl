@@ -330,6 +330,7 @@ img[data-srcset]
     margin: 0
 
   &__item
+    visibility: hidden;
     width: 20%
     padding: 0 15px 15px 0
     @media screen and (max-width: 1550px)
@@ -343,21 +344,33 @@ img[data-srcset]
   &__card
     width: 100%
     height: 537px
-    background-position: 50% 50%;
-    background-size: cover;
     display: flex;
     align-items flex-end
     padding: 20px
     color: #ffffff
-    font-size: 42px
+    font-size: 30px
     line-height: 1.1
     font-weight: bold;
     text-decoration: none;
     hyphens: auto;
+    overflow: hidden;
+    position: relative;
     +media('md')
       padding: 16px 19px
       height: 420px
       font-size: 28px
 
     &:hover
-      text-decoration: underline;
+      & ^[0]__img
+        transform scale(1.1)
+
+  &__img
+    position: absolute;
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background-position: 50% 50%;
+    background-size: cover;
+    z-index: -1
+    anim(.3s)

@@ -1,3 +1,5 @@
+import ScrollReveal from "scrollreveal";
+
 const moveBackgrounds = () => {
   $('.modulesList__item').each(( i, el ) => {
     const $el = $(el);
@@ -19,3 +21,9 @@ $('.modulesList__header').on('click', function ( e ) {
   $item.toggleClass(activeClass);
 });
 
+ScrollReveal().reveal('.modulesList__title, .modulesList__header', {
+  distance:   '50px',
+  origin:     'left',
+  viewFactor: .5,
+  interval:   80,
+});

@@ -59,11 +59,11 @@
     </header>
     <div class="course">
       <div class="course__container">
-        <h1 class="course__title"><span><span>
+        <h1 class="title course__title"><span><span>
               FREE-RUN STILL-LIFE
               FREE-RUN STILL-LIFE FREE-RUN STILL-LIFE</span></span></h1>
       </div>
-      <div class="course__row">
+      <div class="course__row course__row--withGallery">
         <div class="course__container">
           <div class="course__placeholder"></div>
           <div class="course__header">Информация<br>о курсе:</div>
@@ -216,7 +216,7 @@
     </div>
     <div class="faq" id="faq">
       <div class="faq__container">
-        <h2 class="faq__title"><span>FAQ</span></h2>
+        <h2 class="title faq__title"><span><span>FAQ</span></span></h2>
         <div class="faq__row">
           <div class="faq__items">
             <div class="faq__item">
@@ -324,7 +324,21 @@
     <!--include ../modules/photoswipe/photoswipe-->
     <!--include ../modules/popup/popup-callback-->
     <!--include ../modules/popup/popup-politic-->
-    <!--include ../modules/popup/popup-video-->
+    <div class="modal micromodal-slide" id="video-modal" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close="">
+        <div class="modal__container" role="dialog" aria-modal="true">
+          <div class="modal__video">
+            <button class="modal__close" data-micromodal-close="">
+              <svg>
+                <use xlink:href="icons/icons.svg#icon-close"></use>
+              </svg>
+            </button>
+            <div class="modal__iframe"></div>
+            <!--iframe(allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)-->
+          </div>
+        </div>
+      </div>
+    </div>
     <!--include ../modules/popup/popup-thank-->
     <script>var __webpack_public_path__ = "/js/";</script>
     <script src="js/app.js"></script>

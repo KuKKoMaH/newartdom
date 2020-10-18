@@ -11,83 +11,46 @@
       padding: 0 15px
 
   &__title
-    position: relative;
-    font-size: 60px
-    line-height: 80px
-    font-weight: bold;
-    color: #ffffff
-    margin-bottom: 104px;
-    margin-top: -5px
+    margin-bottom: 0;
     +media('md')
-      margin-top: -3px
-      margin-left: 0
-      font-size: 30px
-      line-height: 44px
-      margin-bottom: 56px
+      margin-bottom: 0;
 
-    &:before, &:after
-      content: ''
-      position: absolute;
-
-    &:after
-      right: 100%
-      top: 3px
-      height: 100%
-      width: 1000px
-      background: repeating-linear-gradient(#1a1616 0px, #1a1616 73px, transparent 73px, transparent 80px)
-      +media('md')
-        background: repeating-linear-gradient(#1a1616 0px, #1a1616 37px, transparent 37px, transparent 44px)
-
-    &:before
-      background: #ec3434
+    &:before // Красная полоса
       width: 561px;
-      height: 40px;
+      height: 41px;
       left: 172px;
-      top: 54px;
+      top: 53px;
+      z-index: -1;
+      +media('md')
+        margin-right: -108px;
+        top: 9px;
 
     & > span
-      background: $black
-      position: relative;
-      box-shadow (-18px 0 0 0 $black) , 18px 0 0 0 $black;
+      &:after // Красный круг
+        width: 196px
+        height: 196px
+        top: -52px;
+        left: 319px;
+        +media('md')
+          width: 76px
+          height: 76px
+          top: -15px;
+          left: 260px;
 
-      & > span
-        position: relative;
-        z-index: 1;
-
-      &:before, &:after
+      &:before // Черная полоска
         content: ''
-        position: absolute;
-
-      &:after
-        width: 195px
-        height: 195px
-        background: #ec3434
-        border-radius: 50%
-        top: -56px;
-        left: 261px;
-        +media('md')
-          width: 102px
-          height: 102px
-          top: -12px;
-          left: 27px;
-
-      &:before
-        width: 130px;
-        height: 5px;
-        background: #1a1616;
-        left: 239px;
-        top: 100%;
-        margin-top: 18px;
-        +media('md')
-          margin-left: -16px;
-          margin-top: 8px;
-
 
   &__row
     position: relative;
-    min-height 724px
+    margin-top: 120px
+
+    &--withGallery
+      min-height 724px
+      +media('md')
+        min-height auto
+
     +media('md')
-      min-height auto
+      margin-top: 60px
 
   //display: flex;
 
@@ -98,6 +61,14 @@
     margin-left: 50px
     +media('md')
       display: none;
+
+  &__text
+    font-size: 23px
+
+    > *
+      visibility: hidden;
+    +media('md')
+      font-size: 16px
 
   &__info
     max-width 50%
@@ -129,13 +100,19 @@
       margin-top: 24px
 
   &__aside
+    visibility: hidden;
     position: absolute;
     height: 684px
     top: 0
     right: 0
     width: 50%
     +media('md')
-      display: none;
+      margin-top: 50px
+      position: relative;
+      height: 300px
+      width: 100%
+
+  //  display: none;
 
   &__image
     height: 100%
@@ -146,3 +123,6 @@
     position: absolute;
     right: 200px
     bottom: -40px
+    +media('md')
+      right: 50%
+      transform translateX(50%)

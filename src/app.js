@@ -5,9 +5,9 @@ import 'jquery.maskedinput/src/jquery.maskedinput';
 
 import './js/init';
 import './js/popups';
-import './js/map';
-import './js/lazyImages';
-import './js/tabs';
+// import './js/map';
+// import './js/lazyImages';
+// import './js/tabs';
 import './js/saveUTM';
 
 import './modules/header/header';
@@ -20,6 +20,15 @@ import './modules/about/about';
 import './modules/courses/courses';
 import './modules/modules/modules';
 import './modules/module/module';
+import './modules/course/course';
+import './modules/coursesList/coursesList';
+import './modules/books/books';
+import './modules/register/register';
+import './modules/customModule/customModule';
+import './modules/mentors/mentors';
+import './modules/history/history';
+import './modules/students/students';
+import './modules/yearPrograms/yearPrograms';
 
 
 

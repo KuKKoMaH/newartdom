@@ -5,6 +5,8 @@ import SmoothScroll from 'smooth-scroll';
 import 'selectize';
 import initSlider   from './initSlider';
 import scriptLoader from './scriptLoader';
+import ScrollReveal from 'scrollreveal';
+import paroller from './paroller';
 
 __webpack_public_path__ = window.JS_PUBLIC_PATH || '/js/';
 
@@ -86,3 +88,22 @@ if ($share.length) {
     });
   });
 }
+
+ScrollReveal({ cleanup: false, reset: false });
+
+ScrollReveal().reveal('.title', {
+  distance:   '50px',
+  origin:     'left',
+  viewFactor: .5,
+});
+
+$('.cards').each(( i, el ) => {
+  ScrollReveal().reveal($(el).find('.cards__item'), {
+    distance:   '50px',
+    origin:     'bottom',
+    viewFactor: .5,
+    interval:   80,
+  });
+});
+
+paroller('.paroller');

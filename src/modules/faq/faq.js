@@ -1,3 +1,5 @@
+import ScrollReveal from "scrollreveal";
+
 const activeClass = 'faq__item--active';
 $('.faq__header span').on('click', function ( e ) {
   var $item = $(e.delegateTarget).parent().parent();
@@ -11,3 +13,16 @@ $('.faq__header span').on('click', function ( e ) {
 });
 
 // $('.coursesFaq__header').first().click();
+
+ScrollReveal().reveal('.faq__item', {
+  distance:   '50px',
+  origin:     'left',
+  viewFactor: .5,
+  interval:   80,
+});
+ScrollReveal().reveal('.faq__formHeader, .faq__input, .faq__footer', {
+  distance:   '50px',
+  origin:     'right',
+  viewFactor: .5,
+  interval:   80,
+});

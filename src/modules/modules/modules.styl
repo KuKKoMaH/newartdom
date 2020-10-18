@@ -1,7 +1,53 @@
 .modules
-  padding: 68px 0 115px
+  padding-top: 68px
+  padding-bottom: 115px;
   +media('md')
-    padding: 35px 0 88px
+    padding-top: 35px
+    padding-bottom: 88px
+
+  &__title
+    margin-bottom: 130px
+    +media('md')
+      margin-bottom: 59px
+    // Красная полоса
+
+    &:before
+      width: 1000px;
+      height: 40px;
+      right: 100%;
+      margin-right: -284px;
+      top: 53px;
+      z-index: -1
+      +media('md')
+        margin-right: -108px;
+        top: 9px;
+
+    & > span
+      // Красный круг
+
+      &:after
+        width: 180px
+        height: 180px
+        top: -52px;
+        left: 319px;
+        +media('md')
+          width: 76px
+          height: 76px
+          top: -17px;
+          left: 134px;
+
+      // Черная полоска
+
+      &:before
+        width: 130px;
+        height: 5px;
+        left: 100%
+        top: 41px;
+        margin-left: -87px;
+        +media('md')
+          top: 17px;
+          margin-left: -107px;
+
 
   &__top
     display: flex;
@@ -12,7 +58,8 @@
       padding: 0 16px
       flex-direction column
 
-  &__title
+  &__header
+    visibility: hidden;
     position: relative;
     font-size: 80px
     line-height: 85px
@@ -53,6 +100,7 @@
         left: -119px;
 
   &__text
+    visibility: hidden;
     max-width 680px
     font-weight: bold;
     margin-top: 5px
@@ -62,10 +110,12 @@
   &__items
     &--active
       & ^[0]__item:nth-child(n+4)
-        visibility: visible;
-        opacity: 1
-        position: static
-        z-index auto
+        display: flex;
+
+  //visibility: visible;
+  //opacity: 1
+  //position: static
+  //z-index auto
 
   &__item
     display: flex;
@@ -81,14 +131,17 @@
       min-height auto
 
     &:nth-child(n+4)
-      visibility: hidden;
-      opacity: 0
-      position: absolute;
-      z-index -1
-      anim()
+      display: none;
+
+  //visibility: hidden;
+  //opacity: 0
+  //position: absolute;
+  //z-index -1
+  //anim()
 
 
   &__content
+    visibility: hidden;
     flex: 1
     display: flex;
     align-items center
@@ -106,6 +159,7 @@
       line-height: 1.5
 
   &__image
+    visibility: hidden;
     flex: 1
     background-size: cover
     background-position: 50% 50%
@@ -162,15 +216,17 @@
         padding: 0px 14px 3px 11px;
         +media('md')
           padding: 3px 7px 3px 6px
+
   &__more
     text-align: center;
     margin-top: 46px
     +media('md')
       margin-top: 0
 
-    button
+    button, a
       position: relative;
       font-weight: bold;
+      text-decoration: none;
 
       &:before
         content: ''
