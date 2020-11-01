@@ -1,142 +1,153 @@
 .courses
-  margin-bottom: 115px
+  position: relative;
+  padding: 285px 0 115px
+  +media('md')
+    padding: 96px 0 55px
+
+  //margin-bottom: 115px
+
   &__title
-    position: relative;
-    font-size: 60px
-    line-height: 75px
-    font-weight: bold;
-    color: #ffffff
-    margin-bottom: 121px;
+    visibility: hidden;
+    top: -46px;
+    right: 6.5%;
+    position: absolute;
+    color: #ec3434;
+    line-height: 1
+    font-size: 220px;
+    font-weight: normal;
+    z-index: 2;
     +media('md')
-      margin-left: 0
-      font-size: 30px
-      line-height: 44px
-      margin-bottom: 31px
+      right: auto;
+      left: .5%
+      top: -69px
+      font-size: 100px
 
-    &:before, &:after
-      content: ''
-      position: absolute;
-
-    &:before
-      top: -5px;
-      left: -28px;
-      width: 747px;
-      height: 47px;
-      background: #ec3434
-      +media('md')
-        bottom: -6px;
-        right: -23px;
-        width: 560px;
-        height: 20px;
-
-    &:after
-      left: -15px;
-      top: 2px;
-      width: 2000px;
-      height: 75px;
-      background: #1a1616
-      +media('md')
-        right: -5px;
-        height: 40px;
-
-    span
-      position: relative;
-      z-index: 1
-      //+media('md')
-
-      &:nth-child(1)
-        &:before, &:after
-          content: ''
-          position: absolute;
-
-        &:before
-          width: 180px
-          height: 180px
-          background: #ec3434
-          border-radius: 50%
-          top: -53px;
-          left: 75px;
-          z-index: -1
-          +media('md')
-            width: 102px
-            height: 102px
-            top: -12px;
-            left: 27px;
-
-        &:after
-          width: 130px;
-          height: 5px;
-          background: #1a1616;
-          left: 244px;
-          top: 100%;
-          margin-top: 18px;
-          +media('md')
-            margin-left: -16px;
-            margin-top: 8px;
+  //&__title
+  //  position: relative;
+  //  font-size: 60px
+  //  line-height: 75px
+  //  font-weight: bold;
+  //  color: #ffffff
+  //  margin-bottom: 121px;
+  //  +media('md')
+  //    margin-left: 0
+  //    font-size: 30px
+  //    line-height: 44px
+  //    margin-bottom: 31px
+  //
+  //  &:before, &:after
+  //    content: ''
+  //    position: absolute;
+  //
+  //  &:before
+  //    top: -5px;
+  //    left: -28px;
+  //    width: 747px;
+  //    height: 47px;
+  //    background: #ec3434
+  //    +media('md')
+  //      bottom: -6px;
+  //      right: -23px;
+  //      width: 560px;
+  //      height: 20px;
+  //
+  //  &:after
+  //    left: -15px;
+  //    top: 2px;
+  //    width: 2000px;
+  //    height: 75px;
+  //    background: #1a1616
+  //    +media('md')
+  //      right: -5px;
+  //      height: 40px;
+  //
+  //  span
+  //    position: relative;
+  //    z-index: 1
+  //    //+media('md')
+  //
+  //    &:nth-child(1)
+  //      &:before, &:after
+  //        content: ''
+  //        position: absolute;
+  //
+  //      &:before
+  //        width: 180px
+  //        height: 180px
+  //        background: #ec3434
+  //        border-radius: 50%
+  //        top: -53px;
+  //        left: 75px;
+  //        z-index: -1
+  //        +media('md')
+  //          width: 102px
+  //          height: 102px
+  //          top: -12px;
+  //          left: 27px;
+  //
+  //      &:after
+  //        width: 130px;
+  //        height: 5px;
+  //        background: #1a1616;
+  //        left: 244px;
+  //        top: 100%;
+  //        margin-top: 18px;
+  //        +media('md')
+  //          margin-left: -16px;
+  //          margin-top: 8px;
 
   &__text
     visibility: hidden;
     letter-spacing 0.01em
+    font-size: 40px
+    line-height: 1.2
+    +media('md')
+      font-size: 20px
 
   &__text2
     visibility: hidden;
 
   &__headers
-    margin: 70px 0
-    display: flex;
+    position: relative;
+    margin: 98px 0 160px
     +media('md')
-      flex-direction column
-      margin: 34px 0 32px
+      margin: 28px 0 40px
 
   &__header
-    flex: 1
-    height: 130px
-    padding: 0 15px
+    //text-decoration: none;
+    display: block;
+    visibility: hidden;
     text-align: center;
-    display: flex;
-    align-items center
-    justify-content center
-    +media('md')
-      height: 70px
-      flex: auto
+    font-size: 150px
+    margin-top: 30px
+    line-height: 80px
+    position: relative;
+    //white-space nowrap
 
     &:nth-child(1)
-      background: #f6f6f6
+      text-align: left;
+      padding-left: 4%
+      z-index: 2
 
     &:nth-child(2)
-      background: #f2f1f1
-
-    &:nth-child(3)
-      background: #ededed
-
-    span
-      visibility: hidden;
-      display: block;
-      position: relative;
-      white-space nowrap
-      font-size: 54px
-      line-height: 1
-      color: #ec3434
       z-index: 1
-      +media('lg')
-        font-size: 40px
-      +media('md')
-        font-size: 26px
 
-      &:before
-        content: ''
-        position: absolute;
-        background: $black
-        left: -10px;
-        right: -11px;
-        height: 8px;
-        bottom: 4px;
-        z-index: -1
-        +media('md')
-          left: -8px;
-          right: -7px;
-          height: 6px;
-          bottom: 0px;
+    +media-max-width(1350px)
+      font-size: 120px
+      margin-top: 5px
+
+    +media('md')
+      font-size: 32px
+      line-height: 30px
+      margin-top: 0px
+
+
+  &__link
+    text-decoration: none;
+    position: relative;
+
+    &:hover
+      text-decoration: underline;
 
   &__items
     margin-top: 63px
@@ -151,11 +162,12 @@
       anim()
 
     &--active
-      .cards__item:nth-child(n+11)
-        visibility: visible;
-        opacity: 1
-        position: static
-        z-index auto
+      &.cards__item
+        &:nth-child(n+11)
+          visibility: visible;
+          opacity: 1
+          position: static
+          z-index auto
 
   &__more
     text-align: center;

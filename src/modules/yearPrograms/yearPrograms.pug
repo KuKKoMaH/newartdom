@@ -1,11 +1,15 @@
-.yearPrograms.c
-  h2.title.yearPrograms__title: span: span ГОДОВЫЕ ПРОГРАММЫ ОБУЧЕНИЯ
-  .yearPrograms__items
-    each i in [1,2,3]
-      .yearPrograms__item
-        button.yearPrograms__image(style='background-image: url(images/01.jpg)' data-micromodal-trigger="video-modal" data-youtube-id='dQw4w9WgXcQ')
-        .yearPrograms__header NAD-ART
-        .yearPrograms__text Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое.
-        .yearPrograms__btn: button.btn.btn--bottomLeft(data-micromodal-trigger="video-modal" data-youtube-id='dQw4w9WgXcQ') ПОДРОБНЕЕ
-  .yearPrograms__more
-    button ЕЩЕ
+.yearPrograms
+  h2.yearPrograms__title #[b год]овые #[span программы]
+  .cWide
+    .yearPrograms__content
+      p Проснувшись однажды утром после беспокойного сна,
+      p Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое. Лежа на панцирнотвердой спине, он видел, стоило ему приподнять голову, свой коричневый, выпуклый, разделенный дугообразными чешуйками живот, на верхушке которого еле держалось готовое вот-вот.
+    .yearPrograms__items
+      each i in [1,2,3]
+        .yearPrograms__item
+          button.yearPrograms__image(style='background-image: url(images/01.jpg)' data-micromodal-trigger="video-modal" data-youtube-id='dQw4w9WgXcQ')
+          .yearPrograms__header NAD-ART
+          .yearPrograms__text Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое.
+          .yearPrograms__btn: button.btn.btn--bottomLeft(data-micromodal-trigger="video-modal" data-youtube-id='dQw4w9WgXcQ') ПОДРОБНЕЕ
+    .yearPrograms__more
+      button ЕЩЕ

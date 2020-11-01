@@ -1,63 +1,56 @@
 .course
-  padding-bottom: 120px
+  padding: 120px 0
   +media('md')
-    padding-bottom: 60px
+    padding: 60px 0
 
   &__container
     max-width 1560px
-    padding: 0 20px
+    padding: 1px 40px
     margin: 0 auto
+    cf()
     +media('md')
       padding: 0 15px
 
   &__title
-    margin-bottom: 0;
+    visibility: hidden;
+    margin-left: -7vw
+    color: #ec3434;
+    //font-size: 220px;
+    font-size: 11vw;
+    line-height: .82
+    font-weight: normal;
+    z-index: 2;
+    margin-top: -200px
+    margin-bottom: 80px
+    max-width calc(50% + 7vw - 50px)
+    hyphens: auto;
+
+    +media-max-width(1750px)
+      margin-left: 0
+      margin-top: -175px
+      font-size: 10vw
+      max-width calc(50% - 50px)
+
     +media('md')
-      margin-bottom: 0;
+      margin-top: -150px
+      margin-bottom: 50px
+      font-size: 75px
+      max-width 100%
 
-    &:before // Красная полоса
-      width: 561px;
-      height: 41px;
-      left: 172px;
-      top: 53px;
-      z-index: -1;
-      +media('md')
-        margin-right: -108px;
-        top: 9px;
-
-    & > span
-      &:after // Красный круг
-        width: 196px
-        height: 196px
-        top: -52px;
-        left: 319px;
-        +media('md')
-          width: 76px
-          height: 76px
-          top: -15px;
-          left: 260px;
-
-      &:before // Черная полоска
-        content: ''
 
   &__row
     position: relative;
-    margin-top: 120px
-
-    &--withGallery
-      min-height 724px
-      +media('md')
-        min-height auto
+    z-index: 2;
 
     +media('md')
       margin-top: 60px
 
-  //display: flex;
-
   &__placeholder
     width: 50%
     float: right;
-    height: 724px
+    //height: 724px
+    //padding-bottom: 44%
+    padding-bottom: 40vw
     margin-left: 50px
     +media('md')
       display: none;
@@ -102,7 +95,8 @@
   &__aside
     visibility: hidden;
     position: absolute;
-    height: 684px
+    //height: 684px
+    padding-bottom: 36%
     top: 0
     right: 0
     width: 50%
@@ -112,12 +106,29 @@
       height: 300px
       width: 100%
 
+    .gallery
+      position: absolute;
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+
+
   //  display: none;
 
   &__image
+    position: absolute;
+    width: 100%
     height: 100%
     background-size: cover
     background-position: 50% 50%
+
+  &__video
+    position: absolute;
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
 
   &__nav
     position: absolute;

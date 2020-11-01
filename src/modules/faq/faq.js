@@ -14,7 +14,7 @@ $('.faq__header span').on('click', function ( e ) {
 
 // $('.coursesFaq__header').first().click();
 
-ScrollReveal().reveal('.faq__item', {
+ScrollReveal().reveal('.faq__title, .faq__item', {
   distance:   '50px',
   origin:     'left',
   viewFactor: .5,

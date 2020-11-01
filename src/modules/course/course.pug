@@ -1,12 +1,9 @@
 .course
-  .course__container
-    h1.title.course__title: span: span
-      | FREE-RUN STILL-LIFE
-      | FREE-RUN STILL-LIFE FREE-RUN STILL-LIFE
   .course__row.course__row--withGallery
     .course__container
       .course__placeholder
-      .course__header Информация#[br]о курсе:
+      //.course__header Информация#[br]о курсе:
+      h1.course__title #[b free]-run#[br]still-#[b life]
       .course__text
         p Проснувшись однажды утром после беспокойного сна,
         //p Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое. Лежа на панцирнотвердой спине, он видел, стоило ему приподнять голову, свой коричневый, выпуклый, разделенный дугообразными чешуйками живот, на верхушке которого еле держалось готовое вот-вот.
@@ -15,14 +12,18 @@
       .course__footer
         .register__price 14 500 ₽
         a.register__button(href='#') ЗАРЕГИСТРИРОВАТЬСЯ
+    .course__container
+      .course__text
+        p Проснувшись однажды утром после беспокойного сна,
 
-    .gallery.course__aside
-      .gallery__slider
-        .gallery__items
-          .gallery__item.course__image(style='background-image: url(images/01.jpg)')
-          .gallery__item.course__image(style='background-image: url(images/02.jpg)')
-          .gallery__item.course__image(style='background-image: url(images/03.jpg)')
-      .nav.course__nav
-        button.nav__button.nav__button--prev: +svg('arrow')
-        button.nav__button.nav__button--next: +svg('arrow')
+    .course__aside
+      .gallery
+        .gallery__slider
+          .gallery__items
+            .gallery__item.course__image(style='background-image: url(images/01.jpg)')
+            .gallery__item.course__image(style='background-image: url(images/02.jpg)')
+            .gallery__item.course__image(style='background-image: url(images/03.jpg)')
+        .nav.course__nav
+          button.nav__button.nav__button--prev: +svg('arrow')
+          button.nav__button.nav__button--next: +svg('arrow')
 

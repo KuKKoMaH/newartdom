@@ -9,7 +9,33 @@
   </head>
   <body onunload="">
     <header class="header">
-      <div class="header__bg" style="background-image: url(img/modules-header-img-header-bg.jpg)"></div>
+      <div class="gallery">
+        <div class="gallery__slider">
+          <div class="gallery__items">
+            <div class="gallery__item">
+              <div class="header__bg" style="background-image: url(img/modules-header-img-header-bg.jpg)"></div>
+            </div>
+            <div class="gallery__item">
+              <div class="header__bg" style="background-image: url(img/modules-header-img-header-bg.jpg)"></div>
+            </div>
+            <div class="gallery__item">
+              <div class="header__bg" style="background-image: url(img/modules-header-img-header-bg.jpg)"></div>
+            </div>
+          </div>
+        </div>
+        <div class="nav header__nav">
+          <button class="nav__button nav__button--prev">
+            <svg>
+              <use xlink:href="icons/icons.svg#icon-arrow"></use>
+            </svg>
+          </button>
+          <button class="nav__button nav__button--next">
+            <svg>
+              <use xlink:href="icons/icons.svg#icon-arrow"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
       <div class="header__searchForm">
         <div class="cWide">
           <form>
@@ -43,13 +69,16 @@
           <div class="header__row"><a class="header__cabinet" href="#">КАБИНЕТ СТУДЕНТА
               <svg>
                 <use xlink:href="icons/icons.svg#icon-login"></use>
-              </svg></a><a class="header__search" href="#">
+              </svg></a>
+            <button class="header__search">
               <svg>
                 <use xlink:href="icons/icons.svg#icon-search"></use>
               </svg>
               <svg>
                 <use xlink:href="icons/icons.svg#icon-close"></use>
-              </svg></a></div>
+              </svg>
+            </button>
+          </div>
           <div class="header__row"><a class="header__faq" href="#faq">
               <svg>
                 <use xlink:href="icons/icons.svg#icon-question"></use>
@@ -59,7 +88,7 @@
     </header>
     <div class="mentors">
       <div class="c">
-        <h2 class="title mentors__title"><span><span>НАША КОМАНДА</span></span></h2>
+        <h2 class="mentors__title">НАША КОМАНДА</h2>
         <div class="mentors__items">
           <div class="mentors__item">
             <div class="mentors__image"><img src="img/modules-mentors-img-mentor.jpg"></div>
@@ -105,8 +134,8 @@
       </div>
     </div>
     <div class="about">
-      <div class="c">
-        <h2 class="title about__title"><span><span>О ШКОЛЕ</span></span></h2>
+      <h2 class="about__title"><b>о на</b>с</h2>
+      <div class="cWide">
         <div class="about__text">Школа <b>NEWARTDOM</b> собрала под своим куполом профессионалов с многолетним опытом преподавания в сфере теории и практики современного искусства. Мы предлагаем качественное профильное образование, которое вы можете получить не выходя из дома. Оно станет отличной базой для ваших последующих творческих и научных исканий.</div>
         <div class="about__principes">
           <div class="about__itemsHeader">Наши<br>преимущества:</div><img class="about__decor2" src="img/modules-about-img-about-decor2.jpg">
@@ -262,8 +291,8 @@
       </div>
     </div>
     <div class="faq" id="faq">
+      <h2 class="faq__title"><b>FA</b>Q</h2>
       <div class="faq__container">
-        <h2 class="title faq__title"><span><span>FAQ</span></span></h2>
         <div class="faq__row">
           <div class="faq__items">
             <div class="faq__item">

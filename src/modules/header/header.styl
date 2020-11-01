@@ -2,9 +2,9 @@ $search_height = 90px;
 
 .header
   position: relative;
-  z-index: 2
+  //z-index: 2
   overflow: hidden;
-  height: 870px
+  height: 600px
   +media('md')
     height: 350px
 
@@ -12,6 +12,9 @@ $search_height = 90px;
     height: 180px
     +media('md')
       height: 120px
+
+    //& .gallery
+    //  filter blur(10px)
 
     & ^[0]__bg
       filter blur(10px)
@@ -41,13 +44,16 @@ $search_height = 90px;
           opacity: 1
 
   &__bg
-    position: absolute;
+    //position: absolute;
     background-size: cover
     background-position: 50% 50%
-    left: -20px
-    top: -20px
-    right: -20px
-    bottom: -20px
+    //left: -20px
+    //top: -20px
+    //right: -20px
+    //bottom: -20px
+    height: 600px
+    +media('md')
+      height: 350px
 
     &:after
       content ''
@@ -61,13 +67,14 @@ $search_height = 90px;
       anim(.25s)
 
   &__searchForm
-    position: absolute;
+    position: fixed;
     //height: $search_height
     top: -($search_height)
     overflow: hidden;
     background: #f6f6f6
     left: 0
     width: 100%
+    z-index: 5
     anim(.25s)
 
     .cWide
@@ -97,15 +104,15 @@ $search_height = 90px;
       border-color: #ec3434
 
   &__top
-    position: absolute;
+    position: fixed;
     left: 0
     top: 0
     width: 100%
     display: flex;
-    //position: relative;
-    z-index: 1
     align-items center
     justify-content space-between
+    background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+    z-index: 10
     anim(.25s)
     +media('md')
       align-items flex-start
@@ -150,6 +157,7 @@ $search_height = 90px;
       align-items center
       margin: 0
       padding: 0
+      list-style none
       +media('md')
         margin-top: 80px
         flex-direction column
@@ -306,3 +314,8 @@ $search_height = 90px;
         width: 24px
         height: 18px
         fill #26232d
+
+  &__nav
+    position: absolute;
+    right: 20px
+    bottom: 20px

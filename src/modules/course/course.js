@@ -6,7 +6,7 @@ ScrollReveal().reveal('.course__aside', {
   viewFactor: .5,
   interval:   80,
 });
-ScrollReveal().reveal('.course__text > *', {
+ScrollReveal().reveal('.course__title, .course__text > *', {
   distance:   '50px',
   origin:     'bottom',
   viewFactor: .5,

@@ -10,12 +10,12 @@ $('.header__close, .header__menu a').on('click', ( e ) => {
 
 const $header = $('.header');
 const $search = $('.header__search');
-const $searchInput = $('.header__search-input');
+const $searchInput = $('.header__searchInput');
 const searchActiveClass = 'header--search';
 $search.on('click', ( e ) => {
   $header.toggleClass(searchActiveClass);
   if ($header.hasClass(searchActiveClass)) {
-    setTimeout(() => $searchInput.focus(), 100);
+    setTimeout(() => $searchInput.focus(), 300);
   }
 });
 

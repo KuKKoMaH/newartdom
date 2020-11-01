@@ -1,52 +1,66 @@
 .modules
-  padding-top: 68px
-  padding-bottom: 115px;
+  position: relative;
+  padding: 334px 0 65px
   +media('md')
-    padding-top: 35px
-    padding-bottom: 88px
+    padding: 140px 0 30px
 
   &__title
-    margin-bottom: 130px
+    visibility: hidden;
+    top: -21px;
+    right: 10%;
+    position: absolute;
+    color: #ec3434;
+    line-height: 1
+    font-size: 220px;
+    font-weight: normal;
+    z-index: 2;
     +media('md')
-      margin-bottom: 59px
-    // Красная полоса
+      top: 0
+      right: 5%
+      font-size: 75px
 
-    &:before
-      width: 1000px;
-      height: 40px;
-      right: 100%;
-      margin-right: -284px;
-      top: 53px;
-      z-index: -1
-      +media('md')
-        margin-right: -108px;
-        top: 9px;
-
-    & > span
-      // Красный круг
-
-      &:after
-        width: 180px
-        height: 180px
-        top: -52px;
-        left: 319px;
-        +media('md')
-          width: 76px
-          height: 76px
-          top: -17px;
-          left: 134px;
-
-      // Черная полоска
-
-      &:before
-        width: 130px;
-        height: 5px;
-        left: 100%
-        top: 41px;
-        margin-left: -87px;
-        +media('md')
-          top: 17px;
-          margin-left: -107px;
+  //&__title
+  //  margin-bottom: 130px
+  //  +media('md')
+  //    margin-bottom: 59px
+  //  // Красная полоса
+  //
+  //  &:before
+  //    width: 1000px;
+  //    height: 40px;
+  //    right: 100%;
+  //    margin-right: -284px;
+  //    top: 53px;
+  //    z-index: -1
+  //    +media('md')
+  //      margin-right: -108px;
+  //      top: 9px;
+  //
+  //  & > span
+  //    // Красный круг
+  //
+  //    &:after
+  //      width: 180px
+  //      height: 180px
+  //      top: -52px;
+  //      left: 319px;
+  //      +media('md')
+  //        width: 76px
+  //        height: 76px
+  //        top: -17px;
+  //        left: 134px;
+  //
+  //    // Черная полоска
+  //
+  //    &:before
+  //      width: 130px;
+  //      height: 5px;
+  //      left: 100%
+  //      top: 41px;
+  //      margin-left: -87px;
+  //      +media('md')
+  //        top: 17px;
+  //        margin-left: -107px;
 
 
   &__top
@@ -55,7 +69,7 @@
     justify-content space-between
     margin-bottom: 109px
     +media('md')
-      padding: 0 16px
+      //padding: 0px
       flex-direction column
 
   &__header
@@ -72,12 +86,10 @@
       hyphens: auto;
       margin-bottom: 40px
 
-    &:before, &:after
+    &:before
       content ''
       position: absolute;
       z-index: -1
-
-    &:before
       width: 100px
       height: 5px
       background: $black
@@ -86,18 +98,20 @@
       +media('md')
         display: none;
 
-    &:after
-      width: 374px
-      height: 374px
-      background: #ec3434
-      border-radius: 50%
-      top: -56px;
-      left: -113px;
-      +media('md')
-        width: 239px
-        height: 239px
-        top: -20px;
-        left: -119px;
+  &__decor
+    width: 374px
+    height: 374px
+    background: #ec3434
+    border-radius: 50%
+    top: -56px;
+    left: -113px;
+    position: absolute;
+    z-index: -1
+    +media('md')
+      width: 239px
+      height: 239px
+      top: -20px;
+      left: -119px;
 
   &__text
     visibility: hidden;
@@ -180,13 +194,18 @@
     span
       position: absolute;
       bottom: 16px;
-      left: 17px;
+      left: 0
+      max-width 100%
+      padding: 0 17px
+      //left: 17px;
       font-size: 42px
       font-weight: bold;
       line-height: 1.1
       color: #ffffff
+      hyphens: auto;
+
       +media('md')
-        font-size: 28px
+        font-size: 24px
         line-height: 30px
 
   &__button

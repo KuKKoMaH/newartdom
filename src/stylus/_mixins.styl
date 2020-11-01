@@ -7,6 +7,10 @@ cf()
 anim(duration = .1s)
   transition: all duration ease-in
 
+media-max-width($width)
+  @media screen and (max-width: $width)
+    {block}
+
 media($condition)
   if $condition == 'lg'
     @media screen and (max-width: $breakpoint-lg - 1)

@@ -5,9 +5,16 @@ $('.courses__more button').on('click', () => {
   $('.courses__more').hide();
 });
 
-ScrollReveal().reveal('.courses__title, .courses__text, .courses__headers span, .courses__text2', {
+ScrollReveal().reveal('.courses__text, .courses__header, .courses__text2', {
   distance:   '50px',
   origin:     'bottom',
+  viewFactor: .5,
+  interval:   80,
+});
+
+ScrollReveal().reveal('.courses__title', {
+  distance:   '50px',
+  origin:     'right',
   viewFactor: .5,
   interval:   80,
 });

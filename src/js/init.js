@@ -6,7 +6,7 @@ import 'selectize';
 import initSlider   from './initSlider';
 import scriptLoader from './scriptLoader';
 import ScrollReveal from 'scrollreveal';
-import paroller from './paroller';
+import paroller     from './paroller';
 
 __webpack_public_path__ = window.JS_PUBLIC_PATH || '/js/';
 
@@ -96,6 +96,13 @@ ScrollReveal().reveal('.title', {
   origin:     'left',
   viewFactor: .5,
 });
+
+ScrollReveal().reveal('.animated > *', {
+  distance:   '50px',
+  origin:     'bottom',
+  viewFactor: .5,
+});
+
 
 $('.cards').each(( i, el ) => {
   ScrollReveal().reveal($(el).find('.cards__item'), {

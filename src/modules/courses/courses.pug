@@ -1,13 +1,14 @@
 .courses
+  h2.courses__title #[b ку]рсы
   .c
-    h2.courses__title
-      span БОЛЕЕ 30 КУРСОВ
-      span #{' '}И 12 МОДУЛЕЙ
+    //h2.courses__title
+    //  span БОЛЕЕ 30 КУРСОВ
+    //  span #{' '}И 12 МОДУЛЕЙ
     .courses__text: b У нас вы можете пройти как отдельный курс, так и выбрать образовательный модуль, который даст вам полное представление об актуальном состоянии художественной теории и практики.
   .courses__headers
-    .courses__header: span ART ПРАКТИКИ
-    .courses__header: span ИСТОРИЯ И ТЕОРИЯ
-    .courses__header: span ДИЗАЙН
+    .courses__header: a.courses__link(href='#') #[b арт-]практики
+    .courses__header: a.courses__link(href='#') #[b история] и теория
+    .courses__header: a.courses__link(href='#') #[b дизайн]
   .c: .courses__text2 Цель образовательной программы #[b(style='color:#ec3434;') NEWARTDOM] — познакомить студентов с инструментами современного искусства и подготовить их к интеграции в глобальную художественную среду.
   .courses__items
     .cards

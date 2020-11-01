@@ -1,12 +1,19 @@
 header.header(class=(HEADER_SMALL ? 'header--small' : ''))
-  .header__bg(style='background-image: url(modules/header/img/header-bg.jpg)')
+  .gallery
+    .gallery__slider
+      .gallery__items
+        .gallery__item: .header__bg(style='background-image: url(modules/header/img/header-bg.jpg)')
+        .gallery__item: .header__bg(style='background-image: url(modules/header/img/header-bg.jpg)')
+        .gallery__item: .header__bg(style='background-image: url(modules/header/img/header-bg.jpg)')
+    .nav.header__nav
+      button.nav__button.nav__button--prev: +svg('arrow')
+      button.nav__button.nav__button--next: +svg('arrow')
 
   .header__searchForm
     .cWide
       form
         input.header__searchInput(placeholder='Введите ключевые слова для поиска')
         button.header__searchButton ПОИСК
-
 
   .header__top
     a.header__logo: img(src='modules/header/img/logo.png')
@@ -28,7 +35,7 @@ header.header(class=(HEADER_SMALL ? 'header--small' : ''))
         a.header__cabinet(href='#')
           | КАБИНЕТ СТУДЕНТА
           +svg('login')
-        a.header__search(href='#')
+        button.header__search()
           +svg('search')
           +svg('close')
       .header__row

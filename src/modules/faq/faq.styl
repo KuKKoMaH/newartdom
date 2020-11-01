@@ -1,9 +1,9 @@
 .faq
   background: #f6f6f6
-  padding-bottom: 100px
+  padding: 210px 0 100px
   position: relative;
   +media('md')
-    padding-bottom: 60px
+    padding: 120px 0 60px
 
   &:before
     content ''
@@ -21,48 +21,65 @@
     padding: 0px 20px
 
   &__title
-    transform translateY(-19px)
-    margin-bottom: 26px
+    visibility: hidden;
+    top: 5px;
+    left: 11%;
+    //left: 50%;
+    //margin-left: -845px;
+    position: absolute;
+    color: #ec3434;
+    line-height: 1
+    font-size: 170px;
+    font-weight: normal;
+    z-index: 2;
     +media('md')
-      transform translateY(-14px)
-      margin-bottom: 26px
+      top: 10px
+      font-size: 75px
 
-    &:before // Красная полоса
-      width: 561px;
-      height: 40px;
-      left: -246px;
-      top: 19px;
-      z-index: -1
-      +media('md')
-        left: -395px;
-        top: 14px;
-        height: 20px;
 
-    & > span
-      &:after // Красный круг
-        width: 135px;
-        height: 135px;
-        top: -30px;
-        left: 47px;
-        +media('md')
-          width: 77px;
-          height: 77px;
-          top: -17px;
-          left: 48px;
-
-      &:before // Черная полоска
-        width: 100px;
-        height: 5px;
-        left: -212px;
-        top: 104px;
-        +media('md')
-          left: -60px;
-          top: -10px;
-
-      & > span
-        margin-right: 150px
-        +media('md')
-          margin-right: 74px
+  //&__title
+  //  transform translateY(-19px)
+  //  margin-bottom: 26px
+  //  +media('md')
+  //    transform translateY(-14px)
+  //    margin-bottom: 26px
+  //
+  //  &:before // Красная полоса
+  //    width: 561px;
+  //    height: 40px;
+  //    left: -246px;
+  //    top: 19px;
+  //    z-index: -1
+  //    +media('md')
+  //      left: -395px;
+  //      top: 14px;
+  //      height: 20px;
+  //
+  //  & > span
+  //    &:after // Красный круг
+  //      width: 135px;
+  //      height: 135px;
+  //      top: -30px;
+  //      left: 47px;
+  //      +media('md')
+  //        width: 77px;
+  //        height: 77px;
+  //        top: -17px;
+  //        left: 48px;
+  //
+  //    &:before // Черная полоска
+  //      width: 100px;
+  //      height: 5px;
+  //      left: -212px;
+  //      top: 104px;
+  //      +media('md')
+  //        left: -60px;
+  //        top: -10px;
+  //
+  //    & > span
+  //      margin-right: 150px
+  //      +media('md')
+  //        margin-right: 74px
 
   &__row
     display: flex;

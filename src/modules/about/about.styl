@@ -1,46 +1,77 @@
 .about
   position: relative;
   margin-bottom: 86px
-  overflow: hidden;
+  //overflow: hidden;
   +media('md')
     margin-bottom: 67px
 
   &__title
-    margin-bottom: 132px
+    visibility: hidden;
+    top: -99px;
+    left: 5.5%
+    //left: 50%;
+    //margin-left: -845px;
+    position: absolute;
+    color: #ec3434;
+    line-height: 1
+    font-size: 220px;
+    font-weight: normal;
+    z-index: 2;
     +media('md')
-      margin-bottom: 57px
+      top: -69px
+      font-size: 100px
 
-    &:before // Красная полоса
-      width: 561px;
-      height: 40px;
-      left: -234px;
-      top: 54px;
-      z-index: -1
+    &:before
+      content: ''
+      position: absolute;
+      left: 9px;
+      top: 76px;
+      width: 124px;
+      height: 124px;
+      background: #ec3434;
+      border-radius: 50%
       +media('md')
-        left: -391px;
-        top: 29px;
-        height: 20px;
+        left: 4px;
+        top: 34px;
+        width: 56px;
+        height: 56px;
 
-    & > span
-      &:after // Красный круг
-        width: 196px;
-        height: 196px;
-        top: -57px;
-        left: -14px;
-        +media('md')
-          width: 76px;
-          height: 76px;
-          top: -17px;
-          left: -9px;
-
-      &:before // Черная полоска
-        width: 100px;
-        height: 5px;
-        left: 266px;
-        top: 91px;
-        +media('md')
-          left: 131px;
-          top: 46px;
+  //&__title
+  //  margin-bottom: 132px
+  //  +media('md')
+  //    margin-bottom: 57px
+  //
+  //  &:before // Красная полоса
+  //    width: 561px;
+  //    height: 40px;
+  //    left: -234px;
+  //    top: 54px;
+  //    z-index: -1
+  //    +media('md')
+  //      left: -391px;
+  //      top: 29px;
+  //      height: 20px;
+  //
+  //  & > span
+  //    &:after // Красный круг
+  //      width: 196px;
+  //      height: 196px;
+  //      top: -57px;
+  //      left: -14px;
+  //      +media('md')
+  //        width: 76px;
+  //        height: 76px;
+  //        top: -17px;
+  //        left: -9px;
+  //
+  //    &:before // Черная полоска
+  //      width: 100px;
+  //      height: 5px;
+  //      left: 266px;
+  //      top: 91px;
+  //      +media('md')
+  //        left: 131px;
+  //        top: 46px;
 
   &__content
     margin: 0 auto
@@ -51,11 +82,13 @@
 
   &__text
     visibility: hidden;
-    margin-top: 90px
+    padding-top: 208px
+    //margin-top: 90px
     font-size: 30px
     line-height: 1.4
     +media('md')
-      margin-top: 40px
+      padding-top: 80px
+      //margin-top: 40px
       font-size: 20px
 
   &__principes
@@ -77,9 +110,10 @@
     &--active
       & ^[0]__item:nth-child(n+5)
         display: block;
-        //opacity: 1
-        //position: relative;
-        //visibility: visible;
+
+  //opacity: 1
+  //position: relative;
+  //visibility: visible;
 
   &__decor2
     position: absolute;
@@ -107,20 +141,23 @@
     z-index: 1
     +media('md')
       position: static;
-      font-size: 47px
+      font-size: 35px
       line-height: 1
       margin-bottom: 26px
 
   &__item
     visibility: hidden;
     position: relative;
-    width: 650px
+    max-width 58%
+    width: 100%
+    //width: 650px
     padding-left: 60px
     font-size: 23px
     line-height: 33px
     margin-bottom: 29px
     //anim()
     +media('md')
+      max-width 100%
       width: 100%
       font-size: 16px
       line-height: 24px
@@ -135,10 +172,11 @@
 
     &:nth-child(n+5)
       display: none;
-      //visibility: hidden;
-      //opacity: 0
-      //position: absolute;
-      //z-index: -1
+
+    //visibility: hidden;
+    //opacity: 0
+    //position: absolute;
+    //z-index: -1
 
     svg
       position: absolute;
@@ -157,14 +195,16 @@
     position: absolute;
     font-size: 30px
     font-weight: bold;
-    left: 100%
-    bottom: 28px
+    //left: 100%
+    right: 20px
+    bottom: 0px
     margin-left: 10px
-    @media screen and (max-width: 1550px)
-      left: auto;
-      margin-left: 0
-      right: 20px
-      bottom: 20px
+    z-index: 1
+    //@media screen and (max-width: 1750px)
+    //  left: auto;
+    //  margin-left: 0
+    //  right: 20px
+    //  bottom: 20px
     +media('md')
       left: 50%
       transform translateX(-50%)

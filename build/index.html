@@ -9,7 +9,33 @@
   </head>
   <body onunload="">
     <header class="header">
-      <div class="header__bg" style="background-image: url(img/modules-header-img-header-bg.jpg)"></div>
+      <div class="gallery">
+        <div class="gallery__slider">
+          <div class="gallery__items">
+            <div class="gallery__item">
+              <div class="header__bg" style="background-image: url(img/modules-header-img-header-bg.jpg)"></div>
+            </div>
+            <div class="gallery__item">
+              <div class="header__bg" style="background-image: url(img/modules-header-img-header-bg.jpg)"></div>
+            </div>
+            <div class="gallery__item">
+              <div class="header__bg" style="background-image: url(img/modules-header-img-header-bg.jpg)"></div>
+            </div>
+          </div>
+        </div>
+        <div class="nav header__nav">
+          <button class="nav__button nav__button--prev">
+            <svg>
+              <use xlink:href="icons/icons.svg#icon-arrow"></use>
+            </svg>
+          </button>
+          <button class="nav__button nav__button--next">
+            <svg>
+              <use xlink:href="icons/icons.svg#icon-arrow"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
       <div class="header__searchForm">
         <div class="cWide">
           <form>
@@ -43,13 +69,16 @@
           <div class="header__row"><a class="header__cabinet" href="#">КАБИНЕТ СТУДЕНТА
               <svg>
                 <use xlink:href="icons/icons.svg#icon-login"></use>
-              </svg></a><a class="header__search" href="#">
+              </svg></a>
+            <button class="header__search">
               <svg>
                 <use xlink:href="icons/icons.svg#icon-search"></use>
               </svg>
               <svg>
                 <use xlink:href="icons/icons.svg#icon-close"></use>
-              </svg></a></div>
+              </svg>
+            </button>
+          </div>
           <div class="header__row"><a class="header__faq" href="#faq">
               <svg>
                 <use xlink:href="icons/icons.svg#icon-question"></use>
@@ -59,8 +88,8 @@
     </header>
     <!--include modules/preloader/preloader-->
     <div class="about">
-      <div class="c">
-        <h2 class="title about__title"><span><span>О ШКОЛЕ</span></span></h2>
+      <h2 class="about__title"><b>о на</b>с</h2>
+      <div class="cWide">
         <div class="about__text">Школа <b>NEWARTDOM</b> собрала под своим куполом профессионалов с многолетним опытом преподавания в сфере теории и практики современного искусства. Мы предлагаем качественное профильное образование, которое вы можете получить не выходя из дома. Оно станет отличной базой для ваших последующих творческих и научных исканий.</div>
         <div class="about__principes">
           <div class="about__itemsHeader">Наши<br>преимущества:</div><img class="about__decor2" src="img/modules-about-img-about-decor2.jpg">
@@ -123,14 +152,17 @@
       </div>
     </div>
     <div class="courses">
+      <h2 class="courses__title"><b>ку</b>рсы</h2>
       <div class="c">
-        <h2 class="courses__title"><span>БОЛЕЕ 30 КУРСОВ</span><span> И 12 МОДУЛЕЙ</span></h2>
+        <!--h2.courses__title-->
+        <!--  span БОЛЕЕ 30 КУРСОВ-->
+        <!--  span #{' '}И 12 МОДУЛЕЙ-->
         <div class="courses__text"><b>У нас вы можете пройти как отдельный курс, так и выбрать образовательный модуль, который даст вам полное представление об актуальном состоянии художественной теории и практики.</b></div>
       </div>
       <div class="courses__headers">
-        <div class="courses__header"><span>ART ПРАКТИКИ</span></div>
-        <div class="courses__header"><span>ИСТОРИЯ И ТЕОРИЯ</span></div>
-        <div class="courses__header"><span>ДИЗАЙН</span></div>
+        <div class="courses__header"><a class="courses__link" href="#"><b>арт-</b>практики</a></div>
+        <div class="courses__header"><a class="courses__link" href="#"><b>история</b> и теория</a></div>
+        <div class="courses__header"><a class="courses__link" href="#"><b>дизайн</b></a></div>
       </div>
       <div class="c">
         <div class="courses__text2">Цель образовательной программы <b style="color:#ec3434;">NEWARTDOM</b> — познакомить студентов с инструментами современного искусства и подготовить их к интеграции в глобальную художественную среду.</div>
@@ -183,92 +215,101 @@
         <button>ЕЩЕ</button>
       </div>
     </div>
-    <div class="yearPrograms c">
-      <h2 class="title yearPrograms__title"><span><span>ГОДОВЫЕ ПРОГРАММЫ ОБУЧЕНИЯ</span></span></h2>
-      <div class="yearPrograms__items">
-        <div class="yearPrograms__item">
-          <button class="yearPrograms__image" style="background-image: url(img/images-01.jpg)" data-micromodal-trigger="video-modal" data-youtube-id="dQw4w9WgXcQ"></button>
-          <div class="yearPrograms__header">NAD-ART</div>
-          <div class="yearPrograms__text">Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое.</div>
-          <div class="yearPrograms__btn">
-            <button class="btn btn--bottomLeft" data-micromodal-trigger="video-modal" data-youtube-id="dQw4w9WgXcQ">ПОДРОБНЕЕ</button>
+    <div class="yearPrograms">
+      <h2 class="yearPrograms__title"><b>год</b>овые <span>программы</span></h2>
+      <div class="cWide">
+        <div class="yearPrograms__content">
+          <p>Проснувшись однажды утром после беспокойного сна,</p>
+          <p>Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое. Лежа на панцирнотвердой спине, он видел, стоило ему приподнять голову, свой коричневый, выпуклый, разделенный дугообразными чешуйками живот, на верхушке которого еле держалось готовое вот-вот.</p>
+        </div>
+        <div class="yearPrograms__items">
+          <div class="yearPrograms__item">
+            <button class="yearPrograms__image" style="background-image: url(img/images-01.jpg)" data-micromodal-trigger="video-modal" data-youtube-id="dQw4w9WgXcQ"></button>
+            <div class="yearPrograms__header">NAD-ART</div>
+            <div class="yearPrograms__text">Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое.</div>
+            <div class="yearPrograms__btn">
+              <button class="btn btn--bottomLeft" data-micromodal-trigger="video-modal" data-youtube-id="dQw4w9WgXcQ">ПОДРОБНЕЕ</button>
+            </div>
+          </div>
+          <div class="yearPrograms__item">
+            <button class="yearPrograms__image" style="background-image: url(img/images-01.jpg)" data-micromodal-trigger="video-modal" data-youtube-id="dQw4w9WgXcQ"></button>
+            <div class="yearPrograms__header">NAD-ART</div>
+            <div class="yearPrograms__text">Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое.</div>
+            <div class="yearPrograms__btn">
+              <button class="btn btn--bottomLeft" data-micromodal-trigger="video-modal" data-youtube-id="dQw4w9WgXcQ">ПОДРОБНЕЕ</button>
+            </div>
+          </div>
+          <div class="yearPrograms__item">
+            <button class="yearPrograms__image" style="background-image: url(img/images-01.jpg)" data-micromodal-trigger="video-modal" data-youtube-id="dQw4w9WgXcQ"></button>
+            <div class="yearPrograms__header">NAD-ART</div>
+            <div class="yearPrograms__text">Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое.</div>
+            <div class="yearPrograms__btn">
+              <button class="btn btn--bottomLeft" data-micromodal-trigger="video-modal" data-youtube-id="dQw4w9WgXcQ">ПОДРОБНЕЕ</button>
+            </div>
           </div>
         </div>
-        <div class="yearPrograms__item">
-          <button class="yearPrograms__image" style="background-image: url(img/images-01.jpg)" data-micromodal-trigger="video-modal" data-youtube-id="dQw4w9WgXcQ"></button>
-          <div class="yearPrograms__header">NAD-ART</div>
-          <div class="yearPrograms__text">Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое.</div>
-          <div class="yearPrograms__btn">
-            <button class="btn btn--bottomLeft" data-micromodal-trigger="video-modal" data-youtube-id="dQw4w9WgXcQ">ПОДРОБНЕЕ</button>
-          </div>
+        <div class="yearPrograms__more">
+          <button>ЕЩЕ</button>
         </div>
-        <div class="yearPrograms__item">
-          <button class="yearPrograms__image" style="background-image: url(img/images-01.jpg)" data-micromodal-trigger="video-modal" data-youtube-id="dQw4w9WgXcQ"></button>
-          <div class="yearPrograms__header">NAD-ART</div>
-          <div class="yearPrograms__text">Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое.</div>
-          <div class="yearPrograms__btn">
-            <button class="btn btn--bottomLeft" data-micromodal-trigger="video-modal" data-youtube-id="dQw4w9WgXcQ">ПОДРОБНЕЕ</button>
-          </div>
-        </div>
-      </div>
-      <div class="yearPrograms__more">
-        <button>ЕЩЕ</button>
       </div>
     </div>
-    <div class="modules cWide">
-      <h2 class="title modules__title"><span><span>ОБРАЗОВАТЕЛЬНЫЕ МОДУЛИ</span></span></h2>
-      <div class="modules__top">
-        <h2 class="modules__header">УЗНАЙ ВСЕ<br>
-          О СОВРЕМЕННОМ<br>
-          ИСКУССТВЕ
-        </h2>
-        <div class="modules__text">Наши образовательные модули построены таким образом, что дают полное   редставление о той или иной тенденции в художественной практике, а также помогают ответить на вопрос «что такое современное искусство». Вы узнаете о  ультимедиальности и интердисциплинарности, новейших практиках кураторства, а также о важнейших трендах в области художественного образования.</div>
-      </div>
-      <div class="modules__items">
-        <div class="modules__item">
-          <div class="modules__image" style="background-image: url(img/images-01.jpg)"><span>Ваши лучшие 15</span></div>
-          <div class="modules__content">
-            <div class="modules__inner">
-              <p>Мы собрали и структурировали модуль “Ваши лучшие 15" таким образом, чтобы студенты, прошедшие его, были полностью готовы к важнейшему шагу в своей жизни — выбору профессии — который будет предопределять всю их дальнейшую жизнь. Найти дело и занятие по душе — залог насыщенной и продуктивной деятельности, которая станет основой успешной карьеры и интересной жизни. В рамках занятий мы создадим общую творческую и интеллектуальную среду, где будем обсуждать проекты, задавать вопросы, получать НОВЫЙ ОПЫТ И говорить о современном искусстве.</p>
-              <div class="modules__button"><a href="#">ПОДРОБНЕЕ</a></div>
+    <div class="modules">
+      <h2 class="modules__title"><b>мод</b>ули</h2>
+      <div class="cWide">
+        <div class="modules__top">
+          <h2 class="modules__header">УЗНАЙ ВСЕ<br>
+            О СОВРЕМЕННОМ<br>
+            ИСКУССТВЕ
+            <div class="modules__decor paroller"></div>
+          </h2>
+          <div class="modules__text">Наши образовательные модули построены таким образом, что дают полное   редставление о той или иной тенденции в художественной практике, а также помогают ответить на вопрос «что такое современное искусство». Вы узнаете о  ультимедиальности и интердисциплинарности, новейших практиках кураторства, а также о важнейших трендах в области художественного образования.</div>
+        </div>
+        <div class="modules__items">
+          <div class="modules__item">
+            <div class="modules__image" style="background-image: url(img/images-01.jpg)"><span>Ваши лучшие 15</span></div>
+            <div class="modules__content">
+              <div class="modules__inner">
+                <p>Мы собрали и структурировали модуль “Ваши лучшие 15" таким образом, чтобы студенты, прошедшие его, были полностью готовы к важнейшему шагу в своей жизни — выбору профессии — который будет предопределять всю их дальнейшую жизнь. Найти дело и занятие по душе — залог насыщенной и продуктивной деятельности, которая станет основой успешной карьеры и интересной жизни. В рамках занятий мы создадим общую творческую и интеллектуальную среду, где будем обсуждать проекты, задавать вопросы, получать НОВЫЙ ОПЫТ И говорить о современном искусстве.</p>
+                <div class="modules__button"><a href="#">ПОДРОБНЕЕ</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="modules__item">
+            <div class="modules__image" style="background-image: url(img/images-02.jpg)"><span>Искусство в эпоху постмодерна</span></div>
+            <div class="modules__content">
+              <div class="modules__inner">
+                <p>Наш модуль "Искусство в эпоху постмодерна" познакомит вас с новейшими практиками и формами современного искусства и месте зрителя в его системе. В рамках системообразующего курса «Постмодернистское искусство» больше узнаем об  стории понятия и затронем проблематику новейших дилософфских течений. Мы узнаем, на чем следует делать упор, чтобы быть актуальным и важным  еждународным художником в эпоху глобализации и смешения.</p>
+                <div class="modules__button"><a href="#">ПОДРОБНЕЕ</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="modules__item">
+            <div class="modules__image" style="background-image: url(img/images-03.jpg)"><span>Медиумспецифичность<br>или мультимедиальность?</span></div>
+            <div class="modules__content">
+              <div class="modules__inner">
+                <p>В рамках нашего модуля “Медиумспецифичность или мультимедиальность” вы узнаете о многообразии современных художественных средств, создадите свои арт-проекты, используя различные медиумы, и сможете определится со своим стилем и направлением. Теоретические курсы о кураторстве и истории современного постмодернистского искусства расскажут о новейших практиках презентации такого искусства и его специфике.</p>
+                <div class="modules__button"><a href="#">ПОДРОБНЕЕ</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="modules__item">
+            <div class="modules__image" style="background-image: url(img/images-03.jpg)"><span>Медиумспецифичность<br>или мультимедиальность?</span></div>
+            <div class="modules__content">
+              <div class="modules__inner">
+                <p>В рамках нашего модуля “Медиумспецифичность или мультимедиальность” вы узнаете о многообразии современных художественных средств, создадите свои арт-проекты, используя различные медиумы, и сможете определится со своим стилем и направлением. Теоретические курсы о кураторстве и истории современного постмодернистского искусства расскажут о новейших практиках презентации такого искусства и его специфике.</p>
+                <div class="modules__button"><a href="#">ПОДРОБНЕЕ</a></div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="modules__item">
-          <div class="modules__image" style="background-image: url(img/images-02.jpg)"><span>Искусство в эпоху постмодерна</span></div>
-          <div class="modules__content">
-            <div class="modules__inner">
-              <p>Наш модуль "Искусство в эпоху постмодерна" познакомит вас с новейшими практиками и формами современного искусства и месте зрителя в его системе. В рамках системообразующего курса «Постмодернистское искусство» больше узнаем об  стории понятия и затронем проблематику новейших дилософфских течений. Мы узнаем, на чем следует делать упор, чтобы быть актуальным и важным  еждународным художником в эпоху глобализации и смешения.</p>
-              <div class="modules__button"><a href="#">ПОДРОБНЕЕ</a></div>
-            </div>
-          </div>
+        <div class="modules__more">
+          <button>ЕЩЕ</button>
         </div>
-        <div class="modules__item">
-          <div class="modules__image" style="background-image: url(img/images-03.jpg)"><span>Медиумспецифичность<br>или мультимедиальность?</span></div>
-          <div class="modules__content">
-            <div class="modules__inner">
-              <p>В рамках нашего модуля “Медиумспецифичность или мультимедиальность” вы узнаете о многообразии современных художественных средств, создадите свои арт-проекты, используя различные медиумы, и сможете определится со своим стилем и направлением. Теоретические курсы о кураторстве и истории современного постмодернистского искусства расскажут о новейших практиках презентации такого искусства и его специфике.</p>
-              <div class="modules__button"><a href="#">ПОДРОБНЕЕ</a></div>
-            </div>
-          </div>
-        </div>
-        <div class="modules__item">
-          <div class="modules__image" style="background-image: url(img/images-03.jpg)"><span>Медиумспецифичность<br>или мультимедиальность?</span></div>
-          <div class="modules__content">
-            <div class="modules__inner">
-              <p>В рамках нашего модуля “Медиумспецифичность или мультимедиальность” вы узнаете о многообразии современных художественных средств, создадите свои арт-проекты, используя различные медиумы, и сможете определится со своим стилем и направлением. Теоретические курсы о кураторстве и истории современного постмодернистского искусства расскажут о новейших практиках презентации такого искусства и его специфике.</p>
-              <div class="modules__button"><a href="#">ПОДРОБНЕЕ</a></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modules__more">
-        <button>ЕЩЕ</button>
       </div>
     </div>
     <div class="faq" id="faq">
+      <h2 class="faq__title"><b>FA</b>Q</h2>
       <div class="faq__container">
-        <h2 class="title faq__title"><span><span>FAQ</span></span></h2>
         <div class="faq__row">
           <div class="faq__items">
             <div class="faq__item">

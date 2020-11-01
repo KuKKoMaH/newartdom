@@ -29,6 +29,7 @@ import './modules/mentors/mentors';
 import './modules/history/history';
 import './modules/students/students';
 import './modules/yearPrograms/yearPrograms';
+import './modules/blogs/blogs';
 
 
 
